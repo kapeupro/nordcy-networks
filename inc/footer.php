@@ -1,11 +1,17 @@
+
 <footer>
     <p>&copy; NORDCY NETWORK SAS 2010-2021 -30 Pl. Henri Gadeau de Kerville, 76100 Rouen</p>
-    <h2>Mention légales</h2>
+    <a href="#">Mention légales</a>
     <div class="logo">
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-twitter"></i>
+       <ul>
+           <li><a href=""><i class="fab fa-twitter"></i></a></li>
+           <li><a href=""><i class="fab fa-facebook"></a></i></li>
+           <li><a href=""></a><i class="fab fa-instagram"></a></i></li>
+       </ul>
+
     </div>
 </footer>
-<i class="fab fa-twitter"></i>
+
+<script src="https://kit.fontawesome.com/9ea3b9be24.js" crossorigin="anonymous"></script>
 </body>
 </html>

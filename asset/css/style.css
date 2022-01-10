@@ -62,7 +62,28 @@
 }
 
 /*footer*/
+footer{
+    background-color: #2F469A;
+}
+footer,p,a{
+    padding-top: 1rem;
+    text-align: center;
+    color: white;
+    line-height: 5rem;
+    font-size: 1.5rem;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+.logo a{
+    font-size: 1.5rem;
+     color: white;
 
+}
+.logo ul{
+    display: flex;
+    justify-content: right;
+}
 
 
 
