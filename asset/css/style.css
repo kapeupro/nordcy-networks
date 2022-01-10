@@ -44,6 +44,22 @@
     padding-left: 10px;
 }
 
+/*Container-Header*/
+.box-header {
+    display: flex;
+    justify-content: center;
+}
+.box-header img {
+    position: relative;
+    width : 100%;
+}
+.box-header h1 {
+    position: absolute;
+    top: 45%;
+    color: white;
+    font-size: 64px;
+    text-align: center;
+}
 
 /*footer*/
 footer{
