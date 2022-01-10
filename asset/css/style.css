@@ -1,0 +1,39 @@
+/*Header - Dimitri Sarrazin*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    text-decoration:none ;
+}
+
+.header-nn , li , ul ,a {
+    list-style: none;
+}
+
+.header-nn a {
+    color: #0e1014;
+    font-size: 48px;
+}
+.header-nav ul  li  a {
+    text-align: center;
+    color: #0e1014;
+    font-size: 24px;
+}
+.header-nav nav {
+    align-items: center;
+    display: flex;
+}
+#container_header {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+.header-nav , ul {
+    display: flex;
+}
+.header-nav , li {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+

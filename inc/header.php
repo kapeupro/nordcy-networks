@@ -10,9 +10,20 @@
 </head>
 <body>
 
-<header>
-    <div id="header-nn">
-        <a href="index.php">NORDY NETWORK</a>
+<header id="container_header">
+    <div class="header-nn">
+        <a href="../index.php">NORDY NETWORK</a>
+    </div>
+    <div class="header-nav">
+        <nav>
+            <ul>
+                <li><a href="index.php">Accueil</a></li>
+                <li><a href="inscription.php">Inscription</a></li>
+                <li><a href="connexion.php">Connexion</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
+
 
