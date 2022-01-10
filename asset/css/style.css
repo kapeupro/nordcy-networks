@@ -69,14 +69,14 @@ footer,p,a{
     padding-top: 1rem;
     text-align: center;
     color: white;
-    line-height: 4rem;
-    font-size: 1.5rem;
+    line-height: 2rem;
+    font-size: 1rem;
 }
 footer a:hover{
     text-decoration: underline;
 }
 .logo a{
-    font-size: 2rem;
+    font-size: 1rem;
      color: white;
 }
 .logo i:hover{
@@ -84,12 +84,12 @@ footer a:hover{
     background-color: white;
     border-radius: 7%;
     color: #2F469A ;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 .logo ul{
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
-    flex-flow: column;
 }
 
 
@@ -254,6 +254,11 @@ footer a:hover{
     width: 50%;
     opacity: 0;
     z-index: 1;
+}
+#connexion .sign-up-container:hover{
+    background-color: white;
+
+
 }
 
 #connexion .container.right-panel-active .sign-up-container {

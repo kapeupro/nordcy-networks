@@ -1,7 +1,7 @@
 <?php
 
 include ('inc/header.php');
-include ('footer.php'); ?>
+?>
 
 <section id="connexion">
 <div class="container" id="container">
@@ -39,3 +39,5 @@ include ('footer.php'); ?>
     </div>
 </div>
 </section>
+<?php
+include ('inc/footer.php'); ?>
