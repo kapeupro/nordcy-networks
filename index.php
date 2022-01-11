@@ -38,6 +38,8 @@ include('inc/header.php');
    </div>
 </section>
 
+<!-- Ajout d'un séprateur -->
+
 <section id="partenaire">
     <!-- En attente des logo des partenaire pour faire la section je réaliser les autre sessions en attendant -->
 
@@ -52,7 +54,7 @@ include('inc/header.php');
         </div>
 
         <div class="item-service-1">
-        <h2>Sécurité DNS</h2>
+            <h2>Sécurité DNS</h2>
             <p>Profitez du meilleur de la sécurité DNS pour garantir l'intégrité et la disponibilité
                 de vos services aux utilisateurs, et prévenir infections et fuites de données.</p>
         </div>
