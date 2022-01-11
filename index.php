@@ -38,6 +38,34 @@ include('inc/header.php');
    </div>
 </section>
 
+<section id="partenaire">
+    <!-- En attente des logo des partenaire pour faire la section je réaliser les autre sessions en attendant -->
+
+</section>
+
+<section id="service">
+    <div class="container-service">
+        <div class="item-service-0">
+            <h2>Protection DDoS</h2>
+            <p>Garantissez la disponibilité de vos services face aux attaques
+                les plus avancées avec une protection adaptée sur site, cloud ou hybride.</p>
+        </div>
+
+        <div class="item-service-1">
+        <h2>Sécurité DNS</h2>
+            <p>Profitez du meilleur de la sécurité DNS pour garantir l'intégrité et la disponibilité
+                de vos services aux utilisateurs, et prévenir infections et fuites de données.</p>
+        </div>
+
+        <div class="item-service-0">
+        <h2>Intelligence DDoS</h2>
+            <p>Evaluez la résilience de vos services face aux attaques et bénéficiez de
+                notre expertise de la menace DDoS.</p>
+        </div>
+    </div>
+
+</section>
+
 
 
 
