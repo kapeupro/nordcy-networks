@@ -1,17 +1,17 @@
 <?php
 
 include ('inc/header.php');
-include ('footer.php'); ?>
+?>
 
 <section id="connexion">
 <div class="container" id="container">
     <div class="form-container sign-up-container">
         <form action="#">
-            <h1>Create Account</h1>
-            <input type="text" placeholder="Name" />
+            <h1>Créer un compte</h1>
+            <input type="text" placeholder="Nom" />
             <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <button>Sign in</button>
+            <input type="password" placeholder="Mot de passe" />
+            <button>Connexion</button>
         </form>
     </div>
     <div class="form-container sign-in-container">
@@ -28,7 +28,7 @@ include ('footer.php'); ?>
             <div class="overlay-panel overlay-left">
                 <h1>Bon retour !</h1>
                 <p>Si tu as déjà un compte, connecte-toi !</p>
-                <button class="ghost" id="signIn">Sign In</button>
+                <button class="ghost" id="signIn">Connexion</button>
             </div>
             <div class="overlay-panel overlay-right">
                 <h1>Bienvenue</h1>
@@ -39,3 +39,5 @@ include ('footer.php'); ?>
     </div>
 </div>
 </section>
+<?php
+include ('inc/footer.php'); ?>
