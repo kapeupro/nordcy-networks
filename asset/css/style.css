@@ -9,6 +9,7 @@
 
 .header-nn , li , ul ,a {
     list-style: none;
+    color: white;
 }
 
 .header-nn a {
@@ -60,24 +61,116 @@
     font-size: 64px;
     text-align: center;
 }
+#cta {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 80%;
+    width: 50%;
+}
+.cta-header-ins {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #0055DC;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    font-size: 1.5rem;
+    height: 45px;
+}
+.cta-header-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #000000;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    font-size: 1.5rem;
+    height: 45px;
+}
+.cta-header-con a {
+    color: white;
+
+}
+.cta-header-ins a {
+    color: white;
+}
+.cta-fleche {
+    position: absolute;
+    top: 92%;
+}
+/*Container-a-pro*/
+.container-pro {
+    display: flex;
+    justify-content: center;
+    padding: 10rem;
+}
+.item-pro-0 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 30%;
+    text-align: center;
+}
+.item-pro-1{
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+    font-size: larger;
+}
+/*Service*/
+#service {
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+}
+.container-service {
+    display: flex;
+    flex-direction: column;
+}
+.item-service-0  {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.item-service-1  {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    margin: 2rem;
+    padding: 2rem;
+}
+.item-service-1 h2{
+    display: flex;
+    justify-content: flex-end;
+}
 
 /*footer*/
-footer{
+#footer{
     background-color: #2F469A;
 }
-footer,p,a{
-    padding-top: 1rem;
-    text-align: center;
+/*Attention a ton footer , p , a il me fais bug sur ma partir si tu peux regarder comment modifier le truc merci ;) */
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: white;
-    line-height: 2rem;
-    font-size: 1rem;
+    font-size: larger;
+    padding-top: 5rem;
 }
-footer a:hover{
+#footer a:hover{
     text-decoration: underline;
 }
 .logo a{
-    font-size: 1rem;
-     color: white;
+    font-size: 2rem;
+    color: white;
 }
 .logo i:hover{
     box-shadow: 1px 2px 10px  4px white;
@@ -89,7 +182,9 @@ footer a:hover{
 .logo ul{
     margin-top: 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    padding: 2rem;
+
 }
 
 
@@ -207,12 +302,16 @@ footer a:hover{
 #connexion span {
     font-size: 12px;
 }
+#connexion .mdp_oublié{
+    padding: 1rem;
+}
 
 #connexion .mdp_oublié a {
     color: #df1c1c;
     font-size: 14px;
     text-decoration: none;
     margin: 15px 0;
+
 
 }
 #connexion .mdp_oublié a:hover{
@@ -314,16 +413,16 @@ footer a:hover{
 }
 
 #connexion @keyframes show {
-    0%, 49.99% {
-        opacity: 0;
-        z-index: 1;
-    }
+               0%, 49.99% {
+                   opacity: 0;
+                   z-index: 1;
+               }
 
-    50%, 100% {
-        opacity: 1;
-        z-index: 5;
-    }
-}
+               50%, 100% {
+                   opacity: 1;
+                   z-index: 5;
+               }
+           }
 
 #connexion .overlay-container {
     position: absolute;
@@ -699,6 +798,7 @@ footer a:hover{
 
 
 
+
 #inscription {
     display: flex;
     justify-content: center;
@@ -714,9 +814,9 @@ footer a:hover{
 
 }
 #inscription .text_connect{
-/*
-background-color: #2e59d9 ;
-*/
+    /*
+    background-color: #2e59d9 ;
+    */
 }
 #inscription .connect_wrap{
     height: 100%;
@@ -726,11 +826,12 @@ background-color: #2e59d9 ;
     color: white;
     display: flex;
     justify-content: left;
-    margin: 0 auto;
+    margin-left: 10rem;
     padding-top: 2rem;
     padding-bottom: 2.5rem;
     /*padding-top: 5rem;*/
 }
+
 #inscription .text_connect h2{
     color: white;
     display: flex;
@@ -739,7 +840,7 @@ background-color: #2e59d9 ;
     padding-top: 5rem;
 }
 #inscription .text_connect button{
-    margin-left: 6rem;
+    margin-left: 6.5rem;
 }
 #inscription .text_connect button:hover{
     background-color:white ;
@@ -776,13 +877,19 @@ button {
     transition: transform 80ms ease-in;
     cursor: pointer;
 }
-
-#inscription button:active {
-    transform: scale(0.95);
+#inscription  form button{
+    border-radius: 20px;
+    border: 1px solid #2F469A;
+    background-color: white;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
 }
-
-#inscription button:focus {
-    outline: none;
+#inscription  form button a {
+    color : #2F469A;
 }
 
 #inscription button.ghost {
@@ -800,8 +907,16 @@ button {
     height: 100%;
     text-align: center;
 }
-
-
+#inscription form input{
+   background-color: #e8f0fe;
+    border: none;
+}
+.separator_form{
+    width: 6rem;
+    height: 1px;
+    background-color: #2F469A;
+    border-radius: 7%;
+}
 #inscription .container {
     background-color: #fff;
     border-radius: 10px;
@@ -821,15 +936,9 @@ button {
     transition: all 0.6s ease-in-out;
 }
 
-#inscription .sign-in-container {
-    left: 0;
-    width: 50%;
-    z-index: 2;
-}
 
-#inscription .container.right-panel-active .sign-in-container {
-    transform: translateX(100%);
-}
+
+
 
 #inscription .sign-up-container {
     left: 0;
@@ -851,16 +960,16 @@ button {
 }
 
 #inscription @keyframes show {
-               0%, 49.99% {
-                   opacity: 0;
-                   z-index: 1;
-               }
+                 0%, 49.99% {
+                     opacity: 0;
+                     z-index: 1;
+                 }
 
-               50%, 100% {
-                   opacity: 1;
-                   z-index: 5;
-               }
-           }
+                 50%, 100% {
+                     opacity: 1;
+                     z-index: 5;
+                 }
+             }
 
 #inscription .overlay-container {
     position: absolute;
@@ -869,73 +978,98 @@ button {
     width: 50%;
     height: 100%;
     overflow: hidden;
-    transition: transform 0.6s ease-in-out;
-    z-index: 100;
-}
 
-#inscription .container.right-panel-active .overlay-container{
-    transform: translateX(-100%);
 }
 
 #inscription .overlay {
-   /* background: red;
-    background-size: cover;
-    background-position: 0 0;*/
     color: black;
     position: relative;
     height: 100%;
     width: 200%;
-    transform: translateX(0);
-    transition: transform 0.6s ease-in-out;
 }
 #inscription .formulaire_insc{
-width: 50%;
-    background: red;
+    width: 50%;
+
     background-size: cover;
 
 }
 #inscription .formulaire_insc input{
-padding: 1rem;
+    padding: 1rem;
     margin: 1rem;
 
 }
 
-#inscription .container.right-panel-active .overlay {
-    transform: translateX(50%);
+/*Contact - Thibault Coge*/
+#contact {
+    padding: 3rem 0;
 }
-
-#inscription .overlay-panel {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
+#contact form {
+    background-color: #2F469A;
+}
+#contact form p {
     text-align: center;
-    top: 0;
-    height: 100%;
-    width: 50%;
-    transform: translateX(0);
-    transition: transform 0.6s ease-in-out;
+    font-size: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: white;
+}
+#contact form .separator_contact{
+    background-color:white ;
+    width: 20%;
+    height: 1px;
+    margin-left: 40%;
+    margin-bottom: 2rem;
+}
+#contact form input {
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    padding: 1rem;
+    margin: 0 auto;
 }
 
-#inscription .overlay-left {
-    transform: translateX(-20%);
+#contact form button {
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+    background-color: white;
+    color: #2F469A;
 }
-
-#inscription .container.right-panel-active .overlay-left {
-    transform: translateX(0);
+#contact form button:hover {
+    background-color: #2D2D83;
+    color: white;
 }
-
-#inscription .overlay-right {
-    right: 0;
-    transform: translateX(0);
+#contact form #prenom {
+    margin-bottom: 2rem;
+    -webkit-box-shadow: 0px 0px 20px 3px #000000;
+    box-shadow: 0px 0px 20px 3px #000000;
 }
-
-#inscription .container.right-panel-active .overlay-right {
-    transform: translateX(20%);
+#contact form #email {
+    margin-bottom: 2rem;
+    -webkit-box-shadow: 0px 0px 20px 3px #000000;
+    box-shadow: 0px 0px 20px 3px #000000;
 }
+#contact form #message {
+    resize: none;
+    height: 5rem;
+    width: 20%;
+    -webkit-box-shadow: 0px 0px 20px 3px #000000;
+    box-shadow: 0px 0px 20px 3px #000000;
+    margin-left: 40%;
+}
+#contact .contact_input {
+    display: flex;
+    flex-flow: column ;
 
-#inscription .social-container {
-    margin: 20px 0;
+}
+#contact button {
+    display: block;
+}
+#contact .contact_button {
+    padding: 2rem;
 }

@@ -14,7 +14,8 @@ include('inc/header.php');
                 <div class="overlay">
 
                     <form action="" method="post" class="formulaire_insc">
-                        <p>Bienvenue sur notre site</p>
+                        <p>Bienvenue sur notre site !</p>
+                        <div class="separator_form"></div>
                         <label for="prenom"</label>
                         <input type="text" id="prenom" name="prenom" placeholder="Prénom">
                         <span class="error"></span>
@@ -24,20 +25,14 @@ include('inc/header.php');
                         <span class="error"></span>
 
                         <label for="email"></label>
-                        <input type="email">
+                        <input type="email" id="email" name="email" placeholder="E-mail">
                         <span class="error"></span>
 
-                        <div class="sex">
-                            <label for="sexe">Sexe : </label>
-                            <select name="sexe" id="sexe">
-                                <option value="">--- Sélectionner ---</option>
-                                <option value="homme">Homme</option>
-                                <option value="femme">Femme</option>
-                                <option value="non-défini">Non-défini</option>
-                            </select>
-                        </div>
+                        <label for="password"></label>
+                        <input type="text" id="password" name="password" placeholder="Mot de passe">
+                        <span class="error"></span>
 
-
+                        <button><a href="">S'inscrire</a></button>
                     </form>
                 </div>
             </div>
