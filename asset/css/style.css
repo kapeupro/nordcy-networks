@@ -9,6 +9,7 @@
 
 .header-nn , li , ul ,a {
     list-style: none;
+    color: white;
 }
 
 .header-nn a {
@@ -60,19 +61,83 @@
     font-size: 64px;
     text-align: center;
 }
+#cta {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 80%;
+    width: 50%;
+}
+.cta-header-ins {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #0055DC;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    font-size: 1.5rem;
+    height: 45px;
+}
+.cta-header-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #000000;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    font-size: 1.5rem;
+    height: 45px;
+}
+.cta-header-con a {
+    color: white;
 
+}
+.cta-header-ins a {
+    color: white;
+}
+.cta-fleche {
+    position: absolute;
+    top: 92%;
+}
+/*Container-a-pro*/
+.container-pro {
+    display: flex;
+    justify-content: center;
+    padding: 10rem;
+}
+.item-pro-0 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 30%;
+    text-align: center;
+}
+.item-pro-1{
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+    font-size: larger;
+}
 /*footer*/
-footer{
+#footer{
     background-color: #2F469A;
 }
-footer,p,a{
-    padding-top: 1rem;
-    text-align: center;
+/*Attention a ton footer , p , a il me fais bug sur ma partir si tu peux regarder comment modifier le truc merci ;) */
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: white;
-    line-height: 5rem;
+    padding: 1rem;
     font-size: 1.5rem;
 }
-footer a:hover{
+#footer a:hover{
     text-decoration: underline;
 }
 .logo a{
