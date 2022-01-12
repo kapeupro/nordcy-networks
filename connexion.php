@@ -72,7 +72,7 @@ include ('inc/header.php');
                     </div>
 
                     <div class="mdp_oublié">
-                        <a href="mdpOublie.php"> Mot de passe oublié ?</a>
+                        <a href="resetmdp.php"> Mot de passe oublié ?</a>
                     </div>
 
                     <button>Connexion</button>
