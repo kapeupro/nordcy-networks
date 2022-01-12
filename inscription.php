@@ -32,6 +32,10 @@ include('inc/header.php');
                         <input type="text" id="password" name="password" placeholder="Mot de passe">
                         <span class="error"></span>
 
+                        <label for="password2"></label>
+                        <input type="text" id="password2" name="password2" placeholder="Confirmer votre mot de passe">
+                        <span class="error"></span>
+
                         <button><a href="">S'inscrire</a></button>
                     </form>
                 </div>

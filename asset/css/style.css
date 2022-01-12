@@ -887,6 +887,7 @@ button {
     text-transform: uppercase;
     transition: transform 80ms ease-in;
     cursor: pointer;
+    margin-top: 1.5rem;
 }
 #inscription  form button a {
     color : #2F469A;
@@ -912,8 +913,8 @@ button {
     border: none;
 }
 .separator_form{
-    width: 6rem;
-    height: 1px;
+    width: 8rem;
+    height: 2px;
     background-color: #2F469A;
     border-radius: 7%;
 }
@@ -995,7 +996,7 @@ button {
 }
 #inscription .formulaire_insc input{
     padding: 1rem;
-    margin: 1rem;
+    margin-top: 0.5rem;
 
 }
 
