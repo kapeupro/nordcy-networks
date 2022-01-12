@@ -186,9 +186,18 @@
     padding: 2rem;
 
 }
+/*Partenaire*/
 
+.container-partenaire {
+    display: flex;
+}
+.item-logo-partenaire {
 
+}
 
+.item-logo-partenaire img {
+    width: 50%;
+}
 
 
 
