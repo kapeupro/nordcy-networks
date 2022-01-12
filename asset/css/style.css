@@ -21,13 +21,10 @@
     color: #0e1014;
     font-size: 24px;
 }
-.header-nav ul  li  a:hover{
-    color: white;
+.header-nav ul  li   :hover{
+    text-decoration: underline r#2F469A;
 }
-.header-nav ul  li:hover{
-    background-color: #2F469A;
-    border-radius: 7%
-}
+
 .header-nav nav {
     align-items: center;
     display: flex;
@@ -853,15 +850,7 @@
 #inscription .text_connect button{
     margin-left: 6.5rem;
 }
-#inscription .text_connect button:hover{
-    background-color:white ;
-    border-color: black;
 
-}
-#inscription .text_connect button a:hover{
-    color: #2F469A ;
-
-}
 
 #inscription p {
     font-size: 14px;

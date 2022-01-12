@@ -14,9 +14,8 @@ if (!empty($_POST['submitted'])) {
     // Error
     $error = validInput($error,$name, 'name', 1, 100);
     $error = validInput($error,$prenom, 'prenom', 1, 200);
-    $error = validInput($error,$dob, 'dob', 1, 50);
-    $error = validInput($error, $sex, 'sexe', 0, 30);
     $error = mailValidation($error, $email, 'email');
+
     if(empty($error['email'])) {
         $sql = "SELECT * FROM /*table user de la base de donnée*/ WHERE email = :email";
         $query = $pdo->prepare($sql);
@@ -24,7 +23,7 @@ if (!empty($_POST['submitted'])) {
         $query->execute();
         $verifEmail = $query->fetch();
         if(!empty($verifEmail)) {
-            $error['email'] = 'Cette email existe déjà';
+            $error['email'] = 'Cet email existe déjà';
         }
     }
 
@@ -41,8 +40,6 @@ if (!empty($_POST['submitted'])) {
         // Injection SQL
         $query->bindValue(':nam', $name, PDO::PARAM_STR);
         $query->bindValue(':prenom', $prenom, PDO::PARAM_STR);
-        $query->bindValue(':dob', $dob, PDO::PARAM_STR);
-        $query->bindValue(':sexe', $sex, PDO::PARAM_STR);
         $query->bindValue(':email', $email, PDO::PARAM_STR);
         $query->bindValue(':password', $password_valid, PDO::PARAM_STR);
         $query->bindValue(':token', $token, PDO::PARAM_STR);
@@ -72,24 +69,24 @@ include('inc/header.php');
                         <p>Bienvenue sur notre site !</p>
                         <div class="separator_form"></div>
                         <label for="prenom"</label>
-                        <input type="text" id="prenom" name="prenom" placeholder="Prénom">
-                        <span class="error"></span>
+                        <input type="text" id="prenom" name="prenom" placeholder="Prénom" value="<?php if(!empty($_POST['prenom'])) {echo $_POST['prenom']; } ?>">
+                        <span class="error"><?php if(!empty($errors['prenom'])) {echo $errors['prenom']; } ?></span>
 
                         <label for="nom"></label>
-                        <input type="text" id="nom" name="nom" placeholder="nom">
-                        <span class="error"></span>
+                        <input type="text" id="nom" name="nom" placeholder="nom" value="<?php if(!empty($_POST['nom'])) {echo $_POST['nom']; } ?>">
+                        <span class="error"><?php if(!empty($errors['nom'])) {echo $errors['nom']; } ?></span>
 
                         <label for="email"></label>
-                        <input type="email" id="email" name="email" placeholder="E-mail">
-                        <span class="error"></span>
+                        <input type="email" id="email" name="email" placeholder="E-mail" value="<?php if(!empty($_POST['email'])) {echo $_POST['email']; } ?>">
+                        <span class="error"><?php if(!empty($errors['nom'])) {echo $errors['nom']; } ?></span>
 
                         <label for="password"></label>
-                        <input type="text" id="password" name="password" placeholder="Mot de passe">
-                        <span class="error"></span>
+                        <input type="text" id="password" name="password" placeholder="Mot de passe" value="<?php if(!empty($_POST['password'])) {echo $_POST['password']; } ?>">
+                        <span class="error"><?php if(!empty($errors['password'])) {echo $errors['password']; } ?></span>
 
                         <label for="password2"></label>
-                        <input type="text" id="password_confirm" name="password2" placeholder="Confirmer votre mot de passe">
-                        <span class="error"></span>
+                        <input type="text" id="password_confirm" name="password_confirm" placeholder="Confirmer votre mot de passe" value="<?php if(!empty($_POST['password_confirm'])) {echo $_POST['password_confirm']; } ?>">
+                        <span class="error"><?php if(!empty($errors['password_confirm'])) {echo $errors['password_confirm']; } ?></span>
 
                         <button id="submitted"><a href="">S'inscrire</a></button>
                     </form>
