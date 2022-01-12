@@ -13,7 +13,7 @@
 
 <header id="container_header">
     <div class="header-nn">
-        <a href="../index.php">NORDY NETWORK</a>
+        <a href="index.php">NORDY NETWORK</a>
     </div>
     <div class="header-nav">
         <nav>
