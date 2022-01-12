@@ -41,7 +41,22 @@ include('inc/header.php');
 <!-- Ajout d'un séprateur -->
 
 <section id="partenaire">
-    <!-- En attente des logo des partenaire pour faire la section je réaliser les autre sessions en attendant -->
+    <div class="container-partenaire">
+        <div class="item-partenaire">
+            <h2> Des millions de propriétés Internet nous font confiance </h2>
+            <p>Consulter les études de cas</p>
+        </div>
+        <div class="item-logo-partenaire">
+            <ul>
+                <li><img src="asset/img/23andMe_Logo.png" alt=""></li>
+                <li><img src="asset/img/R.png" alt=""></li>
+                <li><img src="asset/img/R2.png" alt=""></li>
+                <li><img src="asset/img/R65.png" alt=""></li>
+            </ul>
+        </div>
+
+    </div>
+
 
 </section>
 
