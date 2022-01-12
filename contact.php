@@ -28,8 +28,8 @@ include ('inc/header.php'); ?>
 </section>
 
 
-
-
+<!-- page contact qui change celle la c l'ancienne
+-->
 
 
 

@@ -1,5 +1,37 @@
 <?php
+$error = [];
+if (!empty($_POST['submitted'])) {
 
+    $login = cleanXss('login');
+    $password = cleanXss('password');
+    $email = cleanXss('email');
+
+   $error = emailValidation($error,$email,'email');
+
+    $sql = "SELECT * FROM /*mettre le nom de la base de donnée*/ WHERE email = :login";
+    $query = $pdo->prepare($sql);
+    $query->bindValue(':login', $login, PDO::PARAM_STR);
+    $query->execute();
+    $user = $query->fetch();
+
+    if (!empty($user)) {
+        if (password_verify($password, $user['password'])) {
+            $_SESSION['user'] = array(
+                'id' => $user['id'],
+                'name' => $user['name'],
+                'prenom' => $user['prenom'],
+                'dob' => $user['dob'],
+                'email' => $user['email'],
+                'ip' => $_SERVER['REMOTE_ADDR'] // ::1
+            );
+            header('Location: index.php');
+        } else {
+            $error['login'] = 'Mots de passe incorrect veuillez réessayer';
+        }
+    } else {
+        $error['login'] = 'Veuillez entrer un e-mail correct';
+    }
+}
 include ('inc/header.php');
 ?>
     <section id="connexion">
@@ -14,12 +46,12 @@ include ('inc/header.php');
                     </div>
                     <div>
                         <label for="email"></label>
-                        <input type="email" id="email" placeholder="Email">
+                        <input type="email" id="email" placeholder="Email" value="">
                         <span class="error"></span>
                     </div>
                     <div>
                         <label for="password"></label>
-                        <input type="password" id="password" placeholder="Mot de passe">
+                        <input type="password" id="password" placeholder="Mot de passe" value="">
                         <span class="error"></span>
                     </div>
                     <button>Connexion</button>
