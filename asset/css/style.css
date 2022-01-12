@@ -298,6 +298,7 @@
 #connexion h1 {
     font-weight: bold;
     margin: 0;
+    margin-bottom: 11px;
 }
 
 #connexion p {
@@ -339,6 +340,7 @@
     text-transform: uppercase;
     transition: transform 80ms ease-in;
     cursor: pointer;
+    margin-top: 13px;
 }
 
 #connexion button:active {
@@ -355,7 +357,6 @@
 }
 
 #connexion form {
-    background-color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -365,11 +366,12 @@
     text-align: center;
 }
 
+
 #connexion input {
     background-color: #eee;
     border: none;
     padding: 12px 15px;
-    margin: 8px 0;
+    margin: 8px 12px;
     width: 100%;
 }
 
