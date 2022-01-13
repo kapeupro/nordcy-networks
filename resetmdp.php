@@ -1,4 +1,6 @@
 <?php
+require_once("inc/pdo.php");
+require_once("inc/function.php");
 
 include ('inc/header.php');
 ?>

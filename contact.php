@@ -1,5 +1,24 @@
 <?php
 
+include('inc/function.php');
+
+$errors=array();
+if(!empty($_POST['submitted']))
+{
+    //faille XSS
+    $prenom    = cleanXss('prenom');
+    $email     = cleanXss('email');
+    $message   = cleanXss('message');
+
+    $errors=mailValidation($errors,$email,'email');
+    $errors=textValidation($errors,$message,'message',10,500);
+
+    //If no error
+    if(count($errors)==0){
+        mail('nordcynetwork@gmail.com', 'Envoi depuis la page Contact', $_POST['message'], 'From: ' . $_POST['email']);
+    }
+}
+debug($_POST);
 include ('inc/header.php'); ?>
 
     <section id="contact">
