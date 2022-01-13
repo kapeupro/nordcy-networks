@@ -32,7 +32,7 @@ if (!empty($_POST['submitted'])) {
     if (count($error) == 0) {
         $token = generateRandomString(100);
         $password_valid = password_hash($password_confirm, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO /*table user de la base de donnée*/ (name, prenom, email, password, token, created_at, role) 
+        $sql = "INSERT INTO inscription (name, prenom, email, password, token, created_at, role) 
                 VALUES (:nam,:prenom,:email, :password, :token, NOW(), 'user' )";
 
         // Prepare la request

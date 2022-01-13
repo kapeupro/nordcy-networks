@@ -8,7 +8,7 @@ if (!empty($_POST['submitted'])) {
 
    $error = emailValidation($error,$email,'email');
 
-    $sql = "SELECT * FROM /*mettre le nom de la base de donnée*/ WHERE email = :login";
+    $sql = "SELECT * FROM connexion WHERE email = :login";
     $query = $pdo->prepare($sql);
     $query->bindValue(':login', $login, PDO::PARAM_STR);
     $query->execute();
