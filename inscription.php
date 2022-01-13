@@ -1,15 +1,21 @@
 <?php
 
-$error = [];
-$succes = false;
-if (!empty($_POST['submitted'])) {
+require('inc/pdo.php');
+require('inc/function.php');
 
+verifUserAlreadyConnected();
+$succes = false;
+$error = [];
+
+if (!empty($_POST['submitted'])) {
+    // Faille xss
     $name = cleanXss('name');
     $prenom = cleanXss('prenom');
     $email = cleanXss('email');
     $password = cleanXss('password');
     $password_confirm = cleanXss('password_confirm');
 
+    //Validation
     $password_valid = samePassword($error,$password, $password_confirm, 'password_confirm');
     // Error
     $error = validInput($error,$name, 'name', 1, 100);
@@ -17,7 +23,7 @@ if (!empty($_POST['submitted'])) {
     $error = mailValidation($error, $email, 'email');
 
     if(empty($error['email'])) {
-        $sql = "SELECT * FROM /*table user de la base de donnée*/ WHERE email = :email";
+        $sql = "SELECT * FROM inscription WHERE email = :email";
         $query = $pdo->prepare($sql);
         $query->bindValue(':email',$email,PDO::PARAM_STR);
         $query->execute();
