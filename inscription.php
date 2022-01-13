@@ -17,7 +17,7 @@ if (!empty($_POST['submitted'])) {
     $error = mailValidation($error, $email, 'email');
 
     if(empty($error['email'])) {
-        $sql = "SELECT * FROM /*table user de la base de donnée*/ WHERE email = :email";
+        $sql = "SELECT * FROM nordcynetwork_user WHERE email = :email";
         $query = $pdo->prepare($sql);
         $query->bindValue(':email',$email,PDO::PARAM_STR);
         $query->execute();
@@ -32,7 +32,7 @@ if (!empty($_POST['submitted'])) {
     if (count($error) == 0) {
         $token = generateRandomString(100);
         $password_valid = password_hash($password_confirm, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO /*table user de la base de donnée*/ (name, prenom, email, password, token, created_at, role) 
+        $sql = "INSERT INTO nordcynetwork_user (name, prenom, email, password, token, created_at, role) 
                 VALUES (:nam,:prenom,:email, :password, :token, NOW(), 'user' )";
 
         // Prepare la request
