@@ -8,16 +8,14 @@ function debug(array $tableau)
 }
 
 
-function recupInputValue($key)
-{
-    if(!empty($_POST[$key])) {
+function recupInputValue($key){
+    if (!empty($_POST[$key])) {
         echo $_POST[$key];
     }
 }
 
 
-function cleanXss($key)
-{
+function cleanXss($key){
     return trim(strip_tags($_POST[$key]));
 }
 
@@ -54,3 +52,18 @@ function emailValidation($errors,$email,$key)
     return $errors;
 }
 
+<<<<<<< HEAD
+=======
+
+
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
+>>>>>>> e89ddfa69c06a0b1bc1917249582391841176760

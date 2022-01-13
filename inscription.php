@@ -17,10 +17,10 @@ if (!empty($_POST['submitted'])) {
     $password2 = cleanXss('password2');
 
     // Validation
-    $errors = mailValidation($error,$email,'email');
+    $errors = emailValidation($error,$email,'email');
 
     if(empty($errors['email'])) {
-        $sql = "SELECT * FROM wtgm7011_nordcynetwork WHERE email = :email";
+        $sql = "SELECT * FROM nordcynetwork_user WHERE email = :email";
         $query = $pdo->prepare($sql);
         $query->bindValue(':email',$email,PDO::PARAM_STR);
         $query->execute();
@@ -44,15 +44,12 @@ if (!empty($_POST['submitted'])) {
         $token = generateRandomString(100);
         // hashpassword
         $hashpassword = password_hash($password,PASSWORD_DEFAULT);
-
-
-        if(count($errors) == 0) {
             // generate token
             $token = generateRandomString(100);
             // hashpassword
             $hashpassword = password_hash($password,PASSWORD_DEFAULT);
             // INSERT INTO
-            $sql = "INSERT INTO `wtgm7011_nordcynetwork`(`nom`, `prenom`, `email`,`password`, `token`,`status`, `created_at`) 
+            $sql = "INSERT INTO `nordcynetwork_user`(`nom`, `prenom`, `email`,`password`, `token`,`status`, `created_at`) 
                 VALUES (:nom,:prenom,:email,:password,:token,'user',NOW())";
             $query = $pdo->prepare($sql);
             $query->bindValue(':nom',        $nom,      PDO::PARAM_STR);
@@ -65,7 +62,6 @@ if (!empty($_POST['submitted'])) {
             $success=true;
             header('refresh:5;url=index.php');
         }
-    }
 }
 
 
@@ -106,7 +102,7 @@ include('inc/header.php');
                         <input type="text" id="password2" name="password2" placeholder="Confirmer votre mot de passe" value="">
                         <span class="error"><?php if(!empty($errors['password2'])) {echo $errors['password2']; } ?></span>
 
-                        <button id="submitted"><a href="">S'inscrire</a></button>
+                        <input type="submit" name="submitted" value="Inscription">
                     </form>
                 </div>
             </div>
