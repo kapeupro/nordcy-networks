@@ -41,18 +41,18 @@ include ('inc/header.php');
                     <h1>Créer un compte</h1>
                     <div>
                         <label for="Nom"></label>
-                        <input type="text" id="Nom" placeholder="Nom" >
-                        <span class="error"></span>
+                        <input type="text" id="Nom" placeholder="Nom" value="<?php if(!empty($_POST['nom'])) {echo $_POST['nomom']; } ?>" >
+                        <span class="error"><?php if(!empty($errors['nom'])) {echo $errors['nom']; } ?></span>
                     </div>
                     <div>
                         <label for="email"></label>
-                        <input type="email" id="email" placeholder="Email" value="">
+                        <input type="email" id="email" placeholder="Email" value="<?php if(!empty($_POST['email'])) {echo $_POST['email']; } ?>">
                         <span class="error"></span>
                     </div>
                     <div>
                         <label for="password"></label>
-                        <input type="password" id="password" placeholder="Mot de passe" value="">
-                        <span class="error"></span>
+                        <input type="password" id="password" placeholder="Mot de passe" value="<?php if(!empty($_POST['password'])) {echo $_POST['password']; } ?>">
+                        <span class="error"><?php if(!empty($errors['password'])) {echo $errors['password']; } ?></span>
                     </div>
                     <button>Connexion</button>
                 </form>
@@ -62,13 +62,13 @@ include ('inc/header.php');
                     <h1>Se connecter</h1>
                     <div>
                         <label for="email"></label>
-                        <input type="email" id="email" placeholder="Email">
-                        <span class="error"></span>
+                        <input type="email" id="email" placeholder="Email" value="<?php if(!empty($_POST['email'])) {echo $_POST['email']; } ?>">
+                        <span class="error"><?php if(!empty($errors['nom'])) {echo $errors['nom']; } ?></span>
                     </div>
                     <div>
                         <label for="password"></label>
-                        <input type="password" id="password" placeholder="Mot de passe">
-                        <span class="error"></span>
+                        <input type="password" id="password" placeholder="Mot de passe" value="<?php if(!empty($_POST['password'])) {echo $_POST['password']; } ?>">
+                        <span class="error"><?php if(!empty($errors['password'])) {echo $errors['password']; } ?></span>
                     </div>
 
                     <div class="mdp_oublié">
