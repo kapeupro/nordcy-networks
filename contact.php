@@ -9,7 +9,6 @@ if(!empty($_POST['submitted']))
     $prenom    = cleanXss('prenom');
     $email     = cleanXss('email');
     $message   = cleanXss('message');
-
     $errors=mailValidation($errors,$email,'email');
     $errors=textValidation($errors,$message,'message',10,500);
 

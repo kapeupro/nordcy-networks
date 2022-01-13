@@ -8,16 +8,14 @@ function debug(array $tableau)
 }
 
 
-function recupInputValue($key)
-{
-    if(!empty($_POST[$key])) {
+function recupInputValue($key){
+    if (!empty($_POST[$key])) {
         echo $_POST[$key];
     }
 }
 
 
-function cleanXss($key)
-{
+function cleanXss($key){
     return trim(strip_tags($_POST[$key]));
 }
 
@@ -54,12 +52,15 @@ function emailValidation($errors,$email,$key)
     return $errors;
 }
 
-function samePassword($error, $password1, $password2, $key){
-    if ($password1 === $password2){
-        return $password1;
-    }else {
-        $error[$key] = 'Mot de passe différent';
+
+
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
     }
-    return $error;
+    return $randomString;
 }
 
