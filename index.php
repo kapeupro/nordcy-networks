@@ -6,7 +6,7 @@ include('inc/header.php');
     <div class="box-header">
         <img src="asset/img/globe.svg">
         <h1>Sécurisez votre réseau <br>
-            grâce à NORDY NETWORK </h1>
+            grâce à NORDCY NETWORK </h1>
         <div id="cta">
             <div class="cta-header-ins">
                 <a href="inscription.php">Inscription</a>
