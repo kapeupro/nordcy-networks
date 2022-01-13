@@ -23,18 +23,19 @@ include ('inc/header.php'); ?>
     <section id="contact">
         <div class="container" id="container">
             <div class="form-container sign-in-container">
-                <form action="#">
+                <form action="" method="post" class="wrapform" novalidate>
                     <h1>Nous Contacter</h1>
                     <label for="prenom"></label>
                     <input type="text" id="prenom" placeholder="Prénom" />
                     <span class="error"></span>
                     <label for="email"></label>
-                    <input type="email" id="email" placeholder="Email" />
+                    <input type="email" placeholder="Email*" id="email" name="email" value="<?= recupInputValue('email'); ?>">
                     <span class="error"></span>
                     <label for="message"></label>
                     <input type="text" id="message" placeholder="Message" />
                     <span class="error"></span>
-                    <button>Envoyer</button>
+
+                    <input type="submit" name="submitted" value="ENVOYER">
                 </form>
             </div>
             <div class="overlay-container">
@@ -47,12 +48,6 @@ include ('inc/header.php'); ?>
             </div>
         </div>
     </section>
-
-
-
-
-
-
 
 
 

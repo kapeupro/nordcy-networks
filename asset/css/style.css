@@ -187,13 +187,25 @@
 
 .container-partenaire {
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item-partenaire {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 45%;
 }
 .item-logo-partenaire {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 45%;
 }
-
-.item-logo-partenaire img {
-    width: 50%;
+.item-logo-partenaire img{
+    width: 100%;
+    padding: 1rem;
 }
 
 
