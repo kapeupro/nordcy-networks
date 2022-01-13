@@ -54,12 +54,3 @@ function emailValidation($errors,$email,$key)
     return $errors;
 }
 
-function samePassword($error, $password1, $password2, $key){
-    if ($password1 === $password2){
-        return $password1;
-    }else {
-        $error[$key] = 'Mot de passe différent';
-    }
-    return $error;
-}
-

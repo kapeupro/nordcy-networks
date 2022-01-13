@@ -1,4 +1,9 @@
 <?php
+
+require_once("inc/pdo.php");
+require_once("inc/function.php");
+
+
 $error = [];
 if (!empty($_POST['submitted'])) {
 
@@ -8,7 +13,7 @@ if (!empty($_POST['submitted'])) {
 
    $error = emailValidation($error,$email,'email');
 
-    $sql = "SELECT * FROM connexion WHERE email = :login";
+    $sql = "SELECT * FROM nordcynetwork_user WHERE email = :login";
     $query = $pdo->prepare($sql);
     $query->bindValue(':login', $login, PDO::PARAM_STR);
     $query->execute();

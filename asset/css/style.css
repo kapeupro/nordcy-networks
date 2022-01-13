@@ -197,8 +197,23 @@
 }
 
 
+/*Mentions légal*/
 
+.partimentionslegal{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.contenu-mention-legal{
+    gap: 2rem;
+    Font-family: Roboto, sans-serif;
+    font-weight: 360;
+    Font-size: 15px;
+    Line-height: 100%;
+    align-items: Center;
+    Vertical-align: Top;
 
+}
 
 
 
