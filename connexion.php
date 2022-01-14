@@ -3,76 +3,59 @@
 require_once("inc/pdo.php");
 require_once("inc/function.php");
 
+var_dump($_POST);
+$errors = array();
+var_dump('coucou');
 
-$errors = [];
-if(!empty($_POST['submitted'])) {
-    // Faille xss
-    $login   = trim(strip_tags($_POST['email']));
-    $password  = trim(strip_tags($_POST['password']));
+if(!empty($_POST['submitted'])){
+    $email = cleanXss('email');
+    $password = cleanXss('password');
 
-    $sql = "SELECT * FROM nordcynetwork_user WHERE email = :login";
-    $query = $pdo->prepare($sql);
-    $query->bindValue(':login',$login,PDO::PARAM_STR);
-    $query->execute();
-    $user= $query->fetch();
+    //Verification email
+    $errors = mailValidation($errors,$email,'email');
 
-
-    if(empty($user)) {
-        $errors['email'] = 'Email invalide';
-    } else {
-        if (password_verify($password , $user['password'] )==true){
-            $_SESSION['email']=array(
-                'id'    =>$user['id'],
+    $user = requestVerifLogin($email);
+    var_dump($user);
+    if(empty($user)){
+        $errors['email'] = "Aucun compte trouvé avec cet adresse mail";
+        var_dump('email no valide');
+    }
+    else{
+        if(password_verify($password , $user['password'] )){
+            var_dump('password verif');
+            $_SESSION['user']=array(
+                'id'=>$user['id_user'],
                 'email' =>$user['email'],
                 'status'=>$user['status'],
-                'ip'     =>$_SERVER['REMOTE_ADDR'],//::1
+                'ip'=>$_SERVER['REMOTE_ADDR']
             );
         }else {
-            $errors['password'] = 'Mot de passe incorrect';
+            $errors['password'] = "Mot de passe incorrect";
+            var_dump('mot de pass faux');
+        }
+        if(count($errors) == 0) {
+            var_dump('ok');
+            session_start();
+            header('Location: dashboard.php');
         }
     }
-    if(count($errors) == 0) {
-        header('Location: index.php');
-    }
 }
-
 
 include ('inc/header.php');
 ?>
     <section id="connexion">
         <div class="container">
-            <div class="form-container sign-up-container">
-                <form action="#" method="post">
-                    <h1>Créer un compte</h1>
-                    <div>
-                        <label for="Nom"></label>
-                        <input type="text" id="Nom" placeholder="Nom" value=" ">
-                        <span class="error"><?php if(!empty($errors['nom'])) {echo $errors['nom']; } ?></span>
-                    </div>
-                    <div>
-                        <label for="email"></label>
-                        <input type="email" id="email" placeholder="Email" value=" ">
-                        <span class="error"><?= viewError($errors,'email'); ?></span>
-                    </div>
-                    <div>
-                        <label for="password"></label>
-                        <input type="password" id="password" placeholder="Mot de passe" value=" ">
-                        <span class="error"><?= viewError($errors,'password'); ?></span>
-                    </div>
-                    <input type="submit" name="submitted" value="Connexion">
-                </form>
-            </div>
             <div class="form-container sign-in-container">
-                <form action="#" method="post">
+                <form action="connexion.php" method="post">
                     <h1>Se connecter</h1>
                     <div>
                         <label for="email"></label>
-                        <input type="email" id="email" placeholder="Email" value="<?php if(!empty($_POST['email'])) {echo $_POST['email']; } ?>">
+                        <input type="email" name="email" id="email" placeholder="Email" value="<?php if(!empty($_POST['email'])) {echo $_POST['email']; } ?>">
                         <span class="error"><?php if(!empty($errors['nom'])) {echo $errors['nom']; } ?></span>
                     </div>
                     <div>
                         <label for="password"></label>
-                        <input type="password" id="password" placeholder="Mot de passe" value="<?php if(!empty($_POST['password'])) {echo $_POST['password']; } ?>">
+                        <input type="password" name="password" id="password" placeholder="Mot de passe" value="<?php if(!empty($_POST['password'])) {echo $_POST['password']; } ?>">
                         <span class="error"><?php if(!empty($errors['password'])) {echo $errors['password']; } ?></span>
                     </div>
 

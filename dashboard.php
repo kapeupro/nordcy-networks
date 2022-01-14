@@ -1,8 +1,6 @@
 <?php
 require_once('inc/auth.php');
-forcer_client_connecte();
-
-
+if (client_connecte()){
 
 
 include ('inc/headerdash.php') ?>
@@ -25,3 +23,9 @@ include ('inc/headerdash.php') ?>
         </div>
     </div>
 </section>
+<?php
+
+}
+else {
+    //forcer_client_connecte();
+}

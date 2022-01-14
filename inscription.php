@@ -6,7 +6,6 @@ require('inc/function.php');
 
 $succes = false;
 $error = [];
-debug($_POST);
 
 if (!empty($_POST['submitted'])) {
     // Faille xss
@@ -32,26 +31,6 @@ if (!empty($_POST['submitted'])) {
             }
         }
     }
-    $error = validInput($error,$password2, 'password_confirm', 3, 255);
-    /*If not error*/
-    if (count($error) == 0) {
-        $token = generateRandomString(100);
-        $password_valid = password_hash($password2, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO nordcynetwork_user (name, prenom, email, password, token, created_at, role) 
-                VALUES (:nam,:prenom,:email, :password, :token, NOW(), 'user' )";
-
-        // Prepare la request
-        $query = $pdo->prepare($sql);
-        // Injection SQL
-        $query->bindValue(':nam', $nom, PDO::PARAM_STR);
-        $query->bindValue(':prenom', $prenom, PDO::PARAM_STR);
-        $query->bindValue(':email', $email, PDO::PARAM_STR);
-        $query->bindValue(':password', $password_valid, PDO::PARAM_STR);
-        $query->bindValue(':token', $token, PDO::PARAM_STR);
-
-        //executer la query
-        $query->execute();
-        $succes = true;
 
         // password
         if(!empty($password) || !empty($password2)) {
@@ -65,20 +44,16 @@ if (!empty($_POST['submitted'])) {
 
         }
         if(count($errors) == 0) {
+
             // generate token
             $token = generateRandomString(100);
+
             // hashpassword
             $hashpassword = password_hash($password,PASSWORD_DEFAULT);
-            // generate token
-            $token = generateRandomString(100);
-            // hashpassword
-            $hashpassword = password_hash($password,PASSWORD_DEFAULT);
-            // INSERT INTO
-            $sql = "INSERT INTO `nordcynetwork_user`(`nom`, `prenom`, `email`,`password`, `token`,`status`, `created_at`) 
-                VALUES (:nom,:prenom,:email,:password,:token,'user',NOW())";
+
+            $sql = "INSERT INTO `nordcynetwork_user`(  `email`,`password`, `token`,`status`, `created_at`) 
+                VALUES (:email,:password,:token,'user',NOW())";
             $query = $pdo->prepare($sql);
-            $query->bindValue(':nom',        $nom,      PDO::PARAM_STR);
-            $query->bindValue(':prenom',     $prenom,      PDO::PARAM_STR);
             $query->bindValue(':email',      $email,       PDO::PARAM_STR);
             $query->bindValue(':password',   $hashpassword,PDO::PARAM_STR);
             $query->bindValue(':token',      $token,       PDO::PARAM_STR);
@@ -87,7 +62,6 @@ if (!empty($_POST['submitted'])) {
             $success=true;
             header('refresh:5;url=index.php');
         }
-    }
 }
 include('inc/header.php');
 ?>
