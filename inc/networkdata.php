@@ -14,5 +14,3 @@ echo $data[0]->protocol->name; echo"<br>";
 echo $data[0]->protocol->checksum->status; echo"<br>";
 
 
-
-

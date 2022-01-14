@@ -1,6 +1,8 @@
 <?php
-require_once("inc/function.php");
+
 require_once("inc/pdo.php");
+require_once("inc/function.php");
+
 
 $error = [];
 if (!empty($_POST['submitted'])) {
@@ -100,4 +102,4 @@ include ('inc/header.php');
 
 
 <?php
-include ('inc/footer.php'); ?>
+include('footer.php'); ?>
