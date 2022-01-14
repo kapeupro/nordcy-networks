@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : mer. 12 jan. 2022 à 11:54
+-- Généré le : jeu. 13 jan. 2022 à 12:46
 -- Version du serveur :  10.3.32-MariaDB
 -- Version de PHP : 7.3.33
 
@@ -25,68 +25,81 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `connexion`
+-- Structure de la table `nordcynetwork_data`
 --
 
-CREATE TABLE `connexion` (
-  `id_user` int(1) NOT NULL,
-  `email` varchar(200) NOT NULL,
-  `status` varchar(10) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `token` varchar(255) NOT NULL,
-  `created_at` datetime NOT NULL,
-  `modified_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `nordcynetwork_data` (
+  `id` int(11) NOT NULL,
+  `date` varchar(20) DEFAULT NULL,
+  `version` varchar(20) DEFAULT NULL,
+  `headerLength` varchar(20) DEFAULT NULL,
+  `service` varchar(20) DEFAULT NULL,
+  `identification` varchar(20) DEFAULT NULL,
+  `status` varchar(20) DEFAULT NULL,
+  `flagsCode` varchar(20) DEFAULT NULL,
+  `ttl` varchar(20) DEFAULT NULL,
+  `protocolName` varchar(20) DEFAULT NULL,
+  `protocolFlagsCode` varchar(20) DEFAULT NULL,
+  `checksumStatus` varchar(20) DEFAULT NULL,
+  `checksumCode` varchar(20) DEFAULT NULL,
+  `protocolPortsFrom` varchar(20) DEFAULT NULL,
+  `protocolPortsDest` varchar(20) DEFAULT NULL,
+  `protocolType` varchar(20) DEFAULT NULL,
+  `protocolCode` varchar(20) DEFAULT NULL,
+  `headerChecksum` varchar(20) DEFAULT NULL,
+  `ipFrom` varchar(20) DEFAULT NULL,
+  `ipDest` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `inscription`
+-- Structure de la table `nordcynetwork_user`
 --
 
-CREATE TABLE `inscription` (
-  `id` int(1) NOT NULL,
-  `nom` varchar(250) NOT NULL,
-  `prenom` varchar(250) NOT NULL,
-  `siret` bigint(14) NOT NULL,
-  `adresse` varchar(250) NOT NULL,
-  `code postal` varchar(250) NOT NULL,
-  `email` varchar(200) NOT NULL,
-  `token` varchar(250) NOT NULL,
-  `password` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `nordcynetwork_user` (
+  `id_user` int(11) NOT NULL,
+  `nom` varchar(250) CHARACTER SET utf8 NOT NULL,
+  `prenom` varchar(250) CHARACTER SET utf8 NOT NULL,
+  `email` varchar(200) CHARACTER SET utf8 NOT NULL,
+  `status` varchar(10) CHARACTER SET utf8 NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `token` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `created_at` datetime NOT NULL,
+  `modified_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Index pour les tables déchargées
 --
 
 --
--- Index pour la table `connexion`
+-- Index pour la table `nordcynetwork_data`
 --
-ALTER TABLE `connexion`
-  ADD PRIMARY KEY (`id_user`);
+ALTER TABLE `nordcynetwork_data`
+  ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `inscription`
+-- Index pour la table `nordcynetwork_user`
 --
-ALTER TABLE `inscription`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `nordcynetwork_user`
+  ADD PRIMARY KEY (`id_user`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT pour la table `connexion`
+-- AUTO_INCREMENT pour la table `nordcynetwork_data`
 --
-ALTER TABLE `connexion`
-  MODIFY `id_user` int(1) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `nordcynetwork_data`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `inscription`
+-- AUTO_INCREMENT pour la table `nordcynetwork_user`
 --
-ALTER TABLE `inscription`
-  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `nordcynetwork_user`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

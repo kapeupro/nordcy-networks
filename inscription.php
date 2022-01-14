@@ -95,11 +95,11 @@ include('inc/header.php');
                         <span class="error"><?php if(!empty($errors['nom'])) {echo $errors['nom']; } ?></span>
 
                         <label for="password"></label>
-                        <input type="text" id="password" name="password" placeholder="Mot de passe" value="<?php if(!empty($_POST['password'])) {echo $_POST['password']; } ?>">
+                        <input type="text" id="password" name="password" placeholder="Mot de passe" value="">
                         <span class="error"><?php if(!empty($errors['password'])) {echo $errors['password']; } ?></span>
 
                         <label for="password2"></label>
-                        <input type="text" id="password2" name="password2" placeholder="Confirmer votre mot de passe" value="<?php if(!empty($_POST['password2'])) {echo $_POST['password2']; } ?>">
+                        <input type="text" id="password2" name="password2" placeholder="Confirmer votre mot de passe" value="">
                         <span class="error"><?php if(!empty($errors['password2'])) {echo $errors['password2']; } ?></span>
 
                         <input type="submit" name="submitted" value="Inscription">
