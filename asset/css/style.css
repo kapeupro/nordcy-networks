@@ -227,8 +227,6 @@
     Font-family: Roboto, sans-serif;
     align-items: Center;
     Vertical-align: Top;
-    font-weight: lighter;
-    font-size: 15px;
 }
 
 
@@ -876,7 +874,7 @@
     color: white;
     display: flex;
     justify-content: left;
-    margin-left: 4.5rem;
+    margin-left: 5.5rem;
     padding-top: 5rem;
 }
 #inscription .text_connect button{
