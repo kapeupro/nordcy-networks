@@ -1,42 +1,45 @@
 <?php
+session_start();
+$_SESSION['role'] = 'client';
 
 require_once("inc/pdo.php");
 require_once("inc/function.php");
 
+verifUserAlreadyConnected();
 
-$error = [];
-if (!empty($_POST['submitted'])) {
-
-    $login = cleanXss('login');
-    $password = cleanXss('password');
-    $email = cleanXss('email');
-
-   $error = emailValidation($error,$email,'email');
+$errors = [];
+if(!empty($_POST['submitted'])) {
+    // Faille xss
+    $login   = trim(strip_tags($_POST['email']));
+    $password  = trim(strip_tags($_POST['password']));
 
     $sql = "SELECT * FROM nordcynetwork_user WHERE email = :login";
     $query = $pdo->prepare($sql);
-    $query->bindValue(':login', $login, PDO::PARAM_STR);
+    $query->bindValue(':login',$login,PDO::PARAM_STR);
     $query->execute();
-    $user = $query->fetch();
+    $user= $query->fetch();
 
-    if (!empty($user)) {
-        if (password_verify($password, $user['password'])) {
-            $_SESSION['user'] = array(
-                'id' => $user['id'],
-                'name' => $user['name'],
-                'prenom' => $user['prenom'],
-                'dob' => $user['dob'],
-                'email' => $user['email'],
-                'ip' => $_SERVER['REMOTE_ADDR'] // ::1
-            );
-            header('Location: index.php');
-        } else {
-            $error['login'] = 'Mots de passe incorrect veuillez réessayer';
-        }
+
+    if(empty($user)) {
+        $errors['email'] = 'Email invalide';
     } else {
-        $error['login'] = 'Veuillez entrer un e-mail correct';
+        if (password_verify($password , $user['password'] )==true){
+            $_SESSION['email']=array(
+                'id'    =>$user['id'],
+                'email' =>$user['email'],
+                'status'=>$user['status'],
+                'ip'     =>$_SERVER['REMOTE_ADDR'],//::1
+            );
+        }else {
+            $errors['password'] = 'Mot de passe incorrect';
+        }
+    }
+    if(count($errors) == 0) {
+        header('Location: index.php');
     }
 }
+
+
 include ('inc/header.php');
 ?>
     <section id="connexion">
@@ -52,14 +55,14 @@ include ('inc/header.php');
                     <div>
                         <label for="email"></label>
                         <input type="email" id="email" placeholder="Email" value=" ">
-                        <span class="error"></span>
+                        <span class="error"><?= viewError($errors,'email'); ?></span>
                     </div>
                     <div>
                         <label for="password"></label>
                         <input type="password" id="password" placeholder="Mot de passe" value=" ">
-                        <span class="error"><?php if(!empty($errors['password'])) {echo $errors['password']; } ?></span>
+                        <span class="error"><?= viewError($errors,'password'); ?></span>
                     </div>
-                    <button>Connexion</button>
+                    <input type="submit" name="submitted" value="Connexion">
                 </form>
             </div>
             <div class="form-container sign-in-container">
@@ -80,7 +83,7 @@ include ('inc/header.php');
                         <a href="resetmdp.php"> Mot de passe oublié ?</a>
                     </div>
 
-                    <button>Connexion</button>
+                    <input type="submit" name="submitted" value="Connexion">
                 </form>
             </div>
             <div class="overlay-container">

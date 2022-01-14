@@ -62,3 +62,43 @@ function generateRandomString($length = 10) {
     }
     return $randomString;
 }
+
+
+function verifUserConnected(){
+    if (isLogged()==false){
+        header('Location: login.php');
+    }
+}
+
+function verifUserAlreadyConnected(){
+    if (isLogged()==true){
+        header('Location: index.php');
+    }else{ }
+}
+
+function getUserById($id){
+    global $pdo;
+    $sql="SELECT * FROM nordcynetwork_user WHERE id = :id";
+    $query = $pdo->prepare($sql);
+    $query ->bindValue(':id',$id,PDO::PARAM_INT);
+    $query->execute();
+    return $query->fetch();
+}
+function getUserResetPassword($email,$token){
+    global $pdo;
+    $sql="SELECT * FROM nordcynetwork_user WHERE email = :email AND token= :token";
+    $query = $pdo->prepare($sql);
+    $query ->bindValue(':email',$email,PDO::PARAM_INT);
+    $query ->bindValue(':token',$token,PDO::PARAM_INT);
+    $query->execute();
+    return $query->fetch();
+}
+
+function getUserBySessionId($id_session){
+    global $pdo;
+    $sql = "SELECT * FROM vactolib_user WHERE id=:id";
+    $query = $pdo->prepare($sql);
+    $query->bindValue(':id',$id_session,PDO::PARAM_STR);
+    $query->execute();
+    return $query->fetch();
+}
