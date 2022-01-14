@@ -1000,77 +1000,156 @@ button {
 
 }
 
+
+
 /*Contact - Thibault Coge*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
 #contact {
-    padding: 3rem 0;
-}
-#contact form {
-    background-color: #2F469A;
-}
-#contact form p {
-    text-align: center;
-    font-size: 2rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    color: white;
-}
-#contact form .separator_contact{
-    background-color:white ;
-    width: 20%;
-    height: 1px;
-    margin-left: 40%;
-    margin-bottom: 2rem;
-}
-#contact form input {
-    width: 300px;
-    height: 50px;
-    border-radius: 20px;
-    border: none;
-    padding: 1rem;
-    margin: 0 auto;
-}
-
-#contact form button {
-    margin: 0 auto;
-    width: 200px;
-    height: 50px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    text-align: center;
-    background-color: white;
-    color: #2F469A;
-}
-#contact form button:hover {
-    background-color: #2D2D83;
-    color: white;
-}
-#contact form #prenom {
-    margin-bottom: 2rem;
-    -webkit-box-shadow: 0px 0px 20px 3px #000000;
-    box-shadow: 0px 0px 20px 3px #000000;
-}
-#contact form #email {
-    margin-bottom: 2rem;
-    -webkit-box-shadow: 0px 0px 20px 3px #000000;
-    box-shadow: 0px 0px 20px 3px #000000;
-}
-#contact form #message {
-    resize: none;
-    height: 5rem;
-    width: 20%;
-    -webkit-box-shadow: 0px 0px 20px 3px #000000;
-    box-shadow: 0px 0px 20px 3px #000000;
-    margin-left: 40%;
-}
-#contact .contact_input {
     display: flex;
-    flex-flow: column ;
-
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: -20px 0 50px;
+}
+#contact h1 {
+    font-weight: bold;
+    margin-bottom: 2rem;
 }
 #contact button {
-    display: block;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    margin-top: 2rem;
 }
-#contact .contact_button {
-    padding: 2rem;
+#contact button:hover {
+    background-color: #2F469A;
+    color: white;
+}
+
+#contact button:active {
+    transform: scale(0.95);
+}
+
+#contact button:focus {
+    outline: none;
+}
+
+#contact button.ghost {
+    background-color: transparent;
+    border-color: #FFFFFF;
+}
+
+#contact form {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+}
+#contact  #prenom {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#contact #email {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#contact #message {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height:150px;
+    padding-bottom: 7rem;
+}
+#contact input {
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+#contact .container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+    0 10px 10px rgba(0,0,0,0.22);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+#contact .form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+#contact .sign-in-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+#contact .container.right-panel-active .sign-in-container {
+    transform: translateX(100%);
+}
+
+#contact .sign-up-container {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+#contact .container.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+}
+
+#contact @keyframes show {
+             0%, 49.99% {
+                 opacity: 0;
+                 z-index: 1;
+             }
+
+             50%, 100% {
+                 opacity: 1;
+                 z-index: 5;
+             }
+         }
+
+#contact .overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+#contact .container.right-panel-active .overlay-container{
+    transform: translateX(-100%);
+}
+#contact .overlay-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: #2F469A;
 }

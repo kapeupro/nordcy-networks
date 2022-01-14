@@ -1,35 +1,56 @@
 <?php
 
+include('inc/function.php');
+
+$errors=array();
+if(!empty($_POST['submitted']))
+{
+    //faille XSS
+    $prenom    = cleanXss('prenom');
+    $email     = cleanXss('email');
+    $message   = cleanXss('message');
+    $errors=mailValidation($errors,$email,'email');
+    $errors=textValidation($errors,$message,'message',10,500);
+
+    //If no error
+    if(count($errors)==0){
+        mail('nordcynetwork@gmail.com', 'Envoi depuis la page Contact', $_POST['message'], 'From: ' . $_POST['email']);
+    }
+}
+debug($_POST);
 include ('inc/header.php'); ?>
 
-<section id="contact">
-    <div class="wrap">
-        <form action="#" method="post">
-            <p>Nous Contacter</p>
-            <div class="separator_contact"></div>
-              <div class="contact_input">
-                  <label for="prénom"></label>
-                  <input type="text" id="prenom" placeholder="Prénom" />
-                  <span class="error"></span>
-
-                  <label for="email"></label>
-                  <input type="email" id="email" placeholder="Email" />
-                  <span class="error"></span>
-
-                  <label for="message"></label>
-                  <textarea name="" id="message" placeholder="Votre Message"></textarea>
+    <section id="contact">
+        <div class="container" id="container">
+            <div class="form-container sign-in-container">
+                <form action="#">
+                    <h1>Nous Contacter</h1>
+                    <label for="prenom"></label>
+                    <input type="text" id="prenom" placeholder="Prénom" />
                     <span class="error"></span>
-              </div>
-            <div class="contact_button">
-                <button>Envoyer</button>
+                    <label for="email"></label>
+                    <input type="email" id="email" placeholder="Email" />
+                    <span class="error"></span>
+                    <label for="message"></label>
+                    <input type="text" id="message" placeholder="Message" />
+                    <span class="error"></span>
+                    <button>Envoyer</button>
+                </form>
             </div>
-        </form>
-    </div>
-</section>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <h1>Coordonnées</h1>
+                    <p>Numéro 01 70 48 90 43</p>
+                    <p>Du Lundi au Vendredi de 9:00 à 18:00</p>
+                    <p>Le Samedi de 10:00 à 18:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-<!-- page contact qui change celle la c l'ancienne
--->
+
+
 
 
 
