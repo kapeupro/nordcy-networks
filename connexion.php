@@ -5,7 +5,6 @@ $_SESSION['role'] = 'client';
 require_once("inc/pdo.php");
 require_once("inc/function.php");
 
-verifUserAlreadyConnected();
 
 $errors = [];
 if(!empty($_POST['submitted'])) {
