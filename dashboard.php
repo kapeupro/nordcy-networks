@@ -1,10 +1,9 @@
 <?php
 require_once('inc/auth.php');
-if (!client_connecte()){
+forcer_client_connecte();
 
-    header('location: /connexion.php');
-    exit();
-}
+
+
 
 include ('inc/headerdash.php') ?>
 

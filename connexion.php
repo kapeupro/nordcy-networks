@@ -1,6 +1,4 @@
 <?php
-session_start();
-$_SESSION['role'] = 'client';
 
 require_once("inc/pdo.php");
 require_once("inc/function.php");
