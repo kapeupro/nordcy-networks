@@ -52,12 +52,6 @@ function emailValidation($errors,$email,$key)
     return $errors;
 }
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> c4ee9ea7c4acdad3e1d1cd4db9beb7fd805781e0
-
 function generateRandomString($length = 10) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength = strlen($characters);
@@ -67,8 +61,3 @@ function generateRandomString($length = 10) {
     }
     return $randomString;
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> c4ee9ea7c4acdad3e1d1cd4db9beb7fd805781e0
