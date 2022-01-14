@@ -1,7 +1,6 @@
 <?php
 include_once("auth.php");
 include_once("function.php");
-if(!empty($_SESSION))debug($_SESSION);
 ?>
 <!doctype html>
 <html lang="en">
