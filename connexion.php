@@ -44,17 +44,17 @@ include ('inc/header.php');
                     <h1>Créer un compte</h1>
                     <div>
                         <label for="Nom"></label>
-                        <input type="text" id="Nom" placeholder="Nom" value="<?php if(!empty($_POST['nom'])) {echo $_POST['nomom']; } ?>" >
+                        <input type="text" id="Nom" placeholder="Nom" value=" ">
                         <span class="error"><?php if(!empty($errors['nom'])) {echo $errors['nom']; } ?></span>
                     </div>
                     <div>
                         <label for="email"></label>
-                        <input type="email" id="email" placeholder="Email" value="<?php if(!empty($_POST['email'])) {echo $_POST['email']; } ?>">
+                        <input type="email" id="email" placeholder="Email" value=" ">
                         <span class="error"></span>
                     </div>
                     <div>
                         <label for="password"></label>
-                        <input type="password" id="password" placeholder="Mot de passe" value="<?php if(!empty($_POST['password'])) {echo $_POST['password']; } ?>">
+                        <input type="password" id="password" placeholder="Mot de passe" value=" ">
                         <span class="error"><?php if(!empty($errors['password'])) {echo $errors['password']; } ?></span>
                     </div>
                     <button>Connexion</button>
