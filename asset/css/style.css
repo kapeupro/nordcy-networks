@@ -1183,3 +1183,14 @@ button {
     color: white;
     background-color: #2F469A;
 }
+
+
+
+
+/*Headerdash Thibault*/
+
+#headerdash .wrap .header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
