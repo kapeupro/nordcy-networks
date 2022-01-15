@@ -99,7 +99,7 @@
 }
 .cta-fleche {
     position: absolute;
-    top: 92%;
+    top:90%;
 }
 /*Container-a-pro*/
 .container-pro {
@@ -205,9 +205,12 @@
 }
 .item-logo-partenaire img{
     width: 100%;
-    padding: 1rem;
+    filter: grayscale(100%);
 }
-
+.item-logo-partenaire img:hover{
+    filter: grayscale(0%);
+    width: 110%;
+}
 
 /*Mentions légal*/
 
@@ -1188,6 +1191,7 @@ button {
 
 
 
+
 /*Headerdash - Thibault*/
 #headerdash {
     padding-top: 1.5rem;
@@ -1215,7 +1219,6 @@ button {
 #headerdash .header_nav a:hover {
     text-decoration: underline #2F469A;
 }
-
 
 /*Dashboard - Thibault*/
 
