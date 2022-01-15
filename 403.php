@@ -2,7 +2,6 @@
 
 ?>
 
-
     <section id="error403">
     <div class="container-403">
         <div class="item-403">
