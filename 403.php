@@ -1,7 +1,7 @@
 <?php
 
+?>
 
-include('inc/header.php');
 
     <section id="error403">
     <div class="container-403">
@@ -13,7 +13,3 @@ include('inc/header.php');
         </div>
     </div>
     </section>
-
-
-include('inc/footer.php');
-?>
