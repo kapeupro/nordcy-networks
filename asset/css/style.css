@@ -78,6 +78,22 @@
     font-size: 1.5rem;
     height: 45px;
 }
+.cta-header-ins:hover{
+
+    color: #0055DC ;
+}
+.cta-header-ins a:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0055DC;
+    background: white;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    font-size: 1.5rem;
+    height: 45px;
+}
 .cta-header-con {
     display: flex;
     justify-content: center;
@@ -92,14 +108,36 @@
 }
 .cta-header-con a {
     color: white;
-
 }
+.cta-header-con a:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background: #0055DC;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    font-size: 1.5rem;
+    height: 45px;
+}
+
 .cta-header-ins a {
     color: white;
 }
 .cta-fleche {
     position: absolute;
     top:90%;
+}
+.cta-fleche img:hover{
+    background-color: black;
+    border-radius: 50%;
+
+    width: 100%;
+
+}
+.cta-fleche :hover{
+
 }
 /*Container-a-pro*/
 .container-pro {
@@ -172,7 +210,7 @@
 .logo i:hover{
     box-shadow: 1px 2px 10px  4px white;
     background-color: white;
-    border-radius: 7%;
+    border-radius: 50%;
     color: #2F469A ;
     font-size: 2rem;
 }
@@ -910,6 +948,7 @@ button {
     transition: transform 80ms ease-in;
     cursor: pointer;
 }
+
 #inscription  form button{
     border-radius: 20px;
     border: 1px solid #2F469A;
@@ -942,7 +981,7 @@ button {
     text-align: center;
 }
 #inscription form input{
-   background-color: #e8f0fe;
+    background-color: #e8f0fe;
     border: none;
 }
 .separator_form{
@@ -1610,5 +1649,5 @@ button {
     flex-flow: row nowrap;
     justify-content: space-between;
 }
->>>>>>> c4ee9ea7c4acdad3e1d1cd4db9beb7fd805781e0
+
 

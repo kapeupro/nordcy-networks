@@ -17,12 +17,12 @@ include('inc/header.php');
         </div>
         <div class="cta-fleche">
             <!-- Ajout par la suite l'animations avec le boutton-->
-            <a href="#container-a-pro"> <img src="asset/img/fleche.svg" alt="fleche"></a>
+            <a href="#container-a-pro"> <img src="asset/img/fleche.svg" alt="fleche" ></a>
         </div>
     </div>
 </section>
 
-<section id="container-a-pro">
+<section id="container-a-pro" >
    <div class="container-pro">
        <div class="item-pro-0">
            <h2>A propos de <br>Nordcy Network</h2>
