@@ -36,6 +36,5 @@ else {
     //forcer_client_connecte();
 }
 
-<?php
 include ('inc/footer.php');
 
