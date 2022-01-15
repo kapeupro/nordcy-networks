@@ -60,7 +60,8 @@ if (!empty($_POST['submitted'])) {
             $query->execute();
             // redirection
             $success=true;
-            header('refresh:5;url=index.php');
+            header("Refresh:2; url=index.php");
+            echo('Félicitations vous allez etre rediriger dans 5 seconde vers la page accueil');
         }
 }
 include('inc/header.php');
@@ -94,7 +95,7 @@ include('inc/header.php');
                     <span class="error"><?php if(!empty($errors['nom'])) {echo $errors['nom']; } ?></span>
 
                     <label for="password"></label>
-                    <input type="text" id="password" name="password" placeholder="Mot de passe" value="<?php if(!empty($_POST['password'])) {echo $_POST['password']; } ?>">
+                    <input type="text" id="password" name="password" placeholder="Mot de passe" value="">
                     <span class="error"><?php if(!empty($errors['password'])) {echo $errors['password']; } ?></span>
 
                     <label for="password2"></label>
@@ -103,6 +104,7 @@ include('inc/header.php');
 
                     <input type="submit" name="submitted" value="Inscription">
                 </form>
+
 
             <div class="overlay-container">
                 <div class="overlay">

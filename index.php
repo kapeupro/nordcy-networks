@@ -5,23 +5,23 @@ include('inc/header.php');
 
 <section id="container-header">
     <div class="vh">
-    <div class="box-header">
-        <img src="asset/img/globe.svg">
-        <h1>Sécurisez votre réseau <br>
-            grâce à NORDCY NETWORK </h1>
-        <div id="cta">
-            <div class="cta-header-ins">
-                <a href="inscription.php">Inscription</a>
+        <div class="box-header">
+            <img src="asset/img/globe.svg">
+            <h1>Sécurisez votre réseau <br>
+                grâce à NORDCY NETWORK </h1>
+            <div id="cta">
+                <div class="cta-header-ins">
+                    <a href="inscription.php">Inscription</a>
+                </div>
+                <div class="cta-header-con">
+                    <a href="connexion.php">Connexion</a>
+                </div>
             </div>
-            <div class="cta-header-con">
-                <a href="connexion.php">Connexion</a>
+            <div class="cta-fleche">
+                <!-- Ajout par la suite l'animations avec le boutton-->
+                <a href="#container-a-pro"> <img src="asset/img/fleche.svg" alt="fleche"></a>
             </div>
         </div>
-        <div class="cta-fleche">
-            <!-- Ajout par la suite l'animations avec le boutton-->
-            <a href="#container-a-pro"> <img src="asset/img/fleche.svg" alt="fleche"></a>
-        </div>
-    </div>
     </div>
 </section>
 
@@ -29,7 +29,10 @@ include('inc/header.php');
     <div class="vih">
         <div class="container-pro">
             <div class="item-pro-0">
-                <h2>A propos de <br>Nordcy Network</h2>
+                <h2>
+                    A propos de <br>Nordcy Network
+                    <hr>
+                </h2>
             </div>
             <div class="item-pro-1">
                 <p>Nordcy Network est une société innovante, spécialisée dans la sécurité des systèmes d’information. Ses experts sont mondialement reconnus pour leurs activités de R & D dans le domaine des systèmes de détection d’intrusion et de réaction contre les cyberattaques.
@@ -47,6 +50,7 @@ include('inc/header.php');
         <div class="container-partenaire">
             <div class="item-partenaire">
                 <h2> Des millions de propriétés <br> Internet nous font confiance </h2>
+                <hr>
             </div>
             <div class="item-logo-partenaire">
                 <div class="logo-partenaire">
@@ -67,36 +71,28 @@ include('inc/header.php');
     </div>
 </section>
 
-
-
 <section id="service">
     <div class="container-service">
+
         <div class="item-service-0">
             <h2>Protection DDoS</h2>
-            <p>Garantissez la disponibilité de vos services face aux attaques
+            <p>Garantissez la disponibilité de vos services face aux attaques <br>
                 les plus avancées avec une protection adaptée sur site, cloud ou hybride.</p>
         </div>
-
-        <div class="item-service-1">
-            <h2>Sécurité DNS</h2>
-            <p>Profitez du meilleur de la sécurité DNS pour garantir l'intégrité et la disponibilité
-                de vos services aux utilisateurs, et prévenir infections et fuites de données.</p>
-        </div>
-
-        <div class="item-service-0">
+    </div>
+    <div class="item-service-0">
         <h2>Intelligence DDoS</h2>
-            <p>Evaluez la résilience de vos services face aux attaques et bénéficiez de
-                notre expertise de la menace DDoS.</p>
-        </div>
+        <p>Evaluez la résilience de vos services face aux attaques et bénéficiez de <br>
+            notre expertise de la menace DDoS.</p>
     </div>
 
+    <div class="container-service">
+        <div class="item-service-1">
+            <h2>Sécurité DNS</h2>
+            <p>Profitez du meilleur de la sécurité DNS pour garantir l'intégrité et la disponibilité <br>
+                de vos services aux utilisateurs, et prévenir infections et fuites de données.</p>
+        </div>
+    </div>
 </section>
-
-
-
-
-
-
-
 <?php include('footer.php');
 ?>

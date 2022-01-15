@@ -3,9 +3,7 @@
 require_once("inc/pdo.php");
 require_once("inc/function.php");
 
-var_dump($_POST);
 $errors = array();
-var_dump('coucou');
 
 if(!empty($_POST['submitted'])){
     $email = cleanXss('email');
@@ -15,14 +13,14 @@ if(!empty($_POST['submitted'])){
     $errors = mailValidation($errors,$email,'email');
 
     $user = requestVerifLogin($email);
-    var_dump($user);
+
     if(empty($user)){
         $errors['email'] = "Aucun compte trouvé avec cet adresse mail";
         var_dump('email no valide');
     }
     else{
         if(password_verify($password , $user['password'] )){
-            var_dump('password verif');
+
             $_SESSION['user']=array(
                 'id'=>$user['id_user'],
                 'email' =>$user['email'],
@@ -31,10 +29,10 @@ if(!empty($_POST['submitted'])){
             );
         }else {
             $errors['password'] = "Mot de passe incorrect";
-            var_dump('mot de pass faux');
+
         }
         if(count($errors) == 0) {
-            var_dump('ok');
+
             session_start();
             header('Location: dashboard.php');
         }

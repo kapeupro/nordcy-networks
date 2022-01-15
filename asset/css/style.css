@@ -148,7 +148,11 @@
 }
 .item-service-1 h2{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+}
+.item-service-0 h2 {
+    display: flex;
+    justify-content: center;
 }
 
 /*footer*/
@@ -204,14 +208,14 @@
 .item-partenaire {
     display: flex;
     flex-direction: column;
-    padding: 4rem;
+    padding: 1rem;
     text-align: center;
 }
 .item-logo-partenaire {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 85%;
 
 }
 .item-logo-partenaire img{

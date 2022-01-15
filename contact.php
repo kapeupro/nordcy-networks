@@ -1,5 +1,5 @@
 <?php
-
+require_once("inc/pdo.php");
 include('inc/function.php');
 
 $errors=array();
@@ -14,10 +14,9 @@ if(!empty($_POST['submitted']))
 
     //If no error
     if(count($errors)==0){
-        mail('nordcynetwork@gmail.com', 'Envoi depuis la page Contact', $_POST['message'], 'From: ' . $_POST['email']);
+        mail('admin@wtgm7011.odns.fr', 'Envoi depuis la page Contact', $_POST['message'], 'From: ' . $_POST['email']);
     }
 }
-debug($_POST);
 include ('inc/header.php'); ?>
 
     <section id="contact">
@@ -25,15 +24,18 @@ include ('inc/header.php'); ?>
             <div class="form-container sign-in-container">
                 <form action="" method="post" class="wrapform" novalidate>
                     <h1>Nous Contacter</h1>
+
                     <label for="prenom"></label>
-                    <input type="text" id="prenom" placeholder="Prénom" />
-                    <span class="error"></span>
+                    <input type="text" placeholder="Nom Prenom" id="prenom" name="prenom" value="<?=recupInputValue('prenom');?>">
+                    <span class="error"><?= viewError($errors,'prenom'); ?></span>
+
                     <label for="email"></label>
                     <input type="email" placeholder="Email*" id="email" name="email" value="<?= recupInputValue('email'); ?>">
-                    <span class="error"></span>
+                    <span class="error"><?= viewError($errors,'email'); ?></span>
+
                     <label for="message"></label>
-                    <input type="text" id="message" placeholder="Message" />
-                    <span class="error"></span>
+                    <input type="text" placeholder="Votre message" id="message" name="message" value="" />
+                    <span class="error"><?= viewError($errors,'message'); ?></span>
 
                     <input type="submit" name="submitted" value="ENVOYER">
                 </form>
