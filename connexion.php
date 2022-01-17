@@ -63,7 +63,7 @@ include ('inc/header.php');
                         <a href="resetmdp.php"> Mot de passe oublié ?</a>
                     </div>
 
-                    <input type="submit" name="submitted" value="Connexion">
+                    <input type="submit" name="submitted" value="Connexion" id="connexion_subm">
                 </form>
             </div>
             <div class="overlay-container">
