@@ -1,6 +1,7 @@
 <?php
+session_start();
 require_once('inc/auth.php');
-if (client_connecte()){
+
 
 
 include ('inc/headerdash.php') ?>
@@ -13,6 +14,7 @@ include ('inc/headerdash.php') ?>
                 <input type="submit" value="Dashboard">
                 <input type="submit" value="Logs">
                 <input type="submit" value="Détails">
+                <input type="submit" value="Déconnexion">
             </div>
             <div class="dashboard_graph">
 
@@ -23,9 +25,3 @@ include ('inc/headerdash.php') ?>
         </div>
     </div>
 </section>
-<?php
-
-}
-else {
-    //forcer_client_connecte();
-}
