@@ -5,3 +5,10 @@ function client_connecte (): bool {
     }
     return !empty($_SESSION['connecte']);
 }
+
+function forcer_client_connecte ():void {
+    if(!client_connecte()) {
+      header('location: connexion.php');
+      exit();
+    }
+}
