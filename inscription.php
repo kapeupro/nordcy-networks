@@ -60,7 +60,7 @@ if (!empty($_POST['submitted'])) {
             $query->execute();
             // redirection
             $success=true;
-            header('refresh:5;url=index.php');
+            header('refresh:2;url=connexion.php');
         }
 }
 include('inc/header.php');

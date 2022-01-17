@@ -5,7 +5,7 @@ require_once("inc/function.php");
 
 var_dump($_POST);
 $errors = array();
-var_dump('coucou');
+//var_dump('ok');
 
 if(!empty($_POST['submitted'])){
     $email = cleanXss('email');
@@ -23,6 +23,7 @@ if(!empty($_POST['submitted'])){
     else{
         if(password_verify($password , $user['password'] )){
             var_dump('password verif');
+            session_start(); /* création de session*/
             $_SESSION['user']=array(
                 'id'=>$user['id_user'],
                 'email' =>$user['email'],
@@ -35,7 +36,7 @@ if(!empty($_POST['submitted'])){
         }
         if(count($errors) == 0) {
             var_dump('ok');
-            session_start();
+
             header('Location: dashboard.php');
         }
     }
