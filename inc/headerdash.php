@@ -24,6 +24,7 @@
             <a href="#">Dashboard</a>
             <a href="#">Logs</a>
             <a href="#">Détails</a>
+            <a href="#">Déconnexion</a>
         </div>
     </div>
 </section>

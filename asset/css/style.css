@@ -199,6 +199,7 @@
     align-items: center;
     color: white;
     padding-top: 2rem;
+    font-size: 15px;
 }
 #footer a:hover{
     text-decoration: underline;
@@ -268,7 +269,162 @@
     Font-family: Roboto, sans-serif;
     align-items: Center;
     Vertical-align: Top;
+    font-weight: lighter;
+
 }
+
+/*cookies*/
+
+.particookies{
+    display: flex;
+    justify-content: center;
+    padding-top: 76px;
+    font-weight: 600;
+
+}
+.contenu-cookies{
+    padding: 40px;
+}
+
+.contenu-cookies, h1, h2, p{
+    gap: 2rem;
+    Font-family: Roboto, sans-serif;
+    align-items: Center;
+    Vertical-align: Top;
+    font-weight: lighter;
+}
+
+/*Error 403*/
+
+#notfound {
+    position: relative;
+    height: 100vh;
+    background: #f6f6f6;
+
+
+}
+
+#notfound .notfound {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.notfound {
+    max-width: 767px;
+    width: 100%;
+    line-height: 1.4;
+    padding: 110px 40px;
+    text-align: center;
+    background: #fff;
+    -webkit-box-shadow: 0 15px 15px -10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 15px -10px rgba(0, 0, 0, 0.1);
+}
+
+.notfound .notfound-403 {
+    position: relative;
+    height: 180px;
+}
+
+.notfound .notfound-403 h1 {
+    font-family: "Roboto", sans-serif;
+    left: 50%;
+    top: 50%;
+    font-size: 165px;
+    font-weight: 700;
+    margin: 0;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.notfound .notfound-403 h1 > span {
+    color: #6878ab;
+}
+
+/*code page 404*/
+
+.notfound .notfound-404 {
+    position: relative;
+    height: 180px;
+}
+
+.notfound .notfound-404 h1 {
+    font-family: "Roboto", sans-serif;
+    left: 50%;
+    top: 50%;
+    font-size: 165px;
+    font-weight: 700;
+    margin: 0;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.notfound .notfound-404 h1 > span {
+    color: #6878ab;
+}
+
+
+.notfound h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #151515;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.notfound .notfound-connexion {
+    position: relative;
+    max-width: 320px;
+    width: 100%;
+    margin: auto;
+}
+
+.btn-error{
+    text-align: center;
+}
+
+.btn-404-403 {
+    width: 200px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    align-items: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-404-403:hover{
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-404-403:focus {
+    outline: none;
+}
+
+.btn-404-403{
+    background-image: linear-gradient(to right,  #2F469A, #c4c4c4,#c4c4c4, #2F469A);
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.75);
+}
+
+
+
+
 
 
 
@@ -1351,10 +1507,11 @@
     flex-flow: column wrap;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    width: 25%;
 }
 #dashboard .dashboard_buttons a {
-    padding: 2rem 7rem;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 5rem;
     border: none;
     background-color: white;
     color: black;
@@ -1363,19 +1520,11 @@
 #dashboard .dashboard_buttons a:hover{
     text-decoration: underline #2F469A;
 }
-#dashboard .dashboard_btn {
+#dashboard .dashboard_btn, .logs_btn, .details_btn  {
     padding: 3rem;
 }
-#dashboard .logs_btn {
-    padding: 3rem;
-}
-#dashboard .details_btn {
-    padding: 3rem;
-}
-#dashboard .dashboard_graph {
-    background-color: #029bc1;
-    width: 75%;
-}
-#dashboard .dashboard_container2 {
-    background-color: lime;
+#dashboard .dashboard_container0 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

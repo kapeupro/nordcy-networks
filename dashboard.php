@@ -4,7 +4,7 @@ session_start();
 include ('inc/headerdash.php')
 ?>
 <section id="dashboard">
-    <div class="wrap">
+    <div class="dashboard_container0">
         <div class="dashboard_container1">
             <div class="dashboard_buttons">
                 <div class="dashboard_btn">
@@ -14,15 +14,25 @@ include ('inc/headerdash.php')
                     <a href="#">Logs</a>
                 </div>
                 <div class="details_btn">
-                     <a href="#">Détails</a>
+                    <a href="#">Détails</a>
                 </div>
-            </div>
-            <div class="dashboard_graph">
-                        <!--Graph 1-->
             </div>
         </div>
         <div class="dashboard_container2">
-                        <!--Graph 2-->
+            <!-- canvas -->
+        <div>
+            <canvas id="myChart">
+                
+            </canvas>
+        </div>
+                
+
+                
+            </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src=asset/js/Chart.js></script>
+
 </section>
