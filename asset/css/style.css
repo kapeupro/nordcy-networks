@@ -1394,7 +1394,9 @@ button {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 #dashboard .dashboard_buttons a {
-    padding: 2rem 7rem;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 5rem;
     border: none;
     background-color: white;
     color: black;
@@ -1408,6 +1410,6 @@ button {
 }
 #dashboard .dashboard_container0 {
     display: flex;
-    flex-flow: row nowrap;
+    align-items: center;
     justify-content: space-between;
 }

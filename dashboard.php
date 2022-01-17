@@ -19,13 +19,20 @@ include ('inc/headerdash.php')
             </div>
         </div>
         <div class="dashboard_container2">
-            <div class="dashboard_graph">
-                <!--Graph 1-->
-                <img src="https://images2.alphacoders.com/100/1003880.png" height="500px" width="1100px" alt="">
+            <!-- canvas -->
+        <div>
+            <canvas id="myChart">
+                
+            </canvas>
+        </div>
+                
+
+                
             </div>
         </div>
     </div>
-    <div class="dashboard_container2">
-        <!--TABLEAU MATHIS-->
-    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src=asset/js/Chart.js></script>
+
 </section>
