@@ -1,7 +1,5 @@
 <?php
-require_once('inc/auth.php');
-if (client_connecte()){
-
+session_start();
 
 include ('inc/headerdash.php')
 ?>
@@ -16,28 +14,15 @@ include ('inc/headerdash.php')
                     <a href="#">Logs</a>
                 </div>
                 <div class="details_btn">
-                     <a href="#">Détails</a>
+                    <a href="#">Détails</a>
                 </div>
             </div>
             <div class="dashboard_graph">
-                        <!--Graph 1-->
+                <!--Graph 1-->
             </div>
         </div>
         <div class="dashboard_container2">
-                        <!--Graph 2-->
+            <!--Graph 2-->
         </div>
     </div>
 </section>
-<?php
-
-}
-else {
-    //forcer_client_connecte();
-}
-
-
-include ('inc/footer.php');
-
-
-?>
-
