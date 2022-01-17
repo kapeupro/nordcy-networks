@@ -78,6 +78,22 @@
     font-size: 1.5rem;
     height: 45px;
 }
+.cta-header-ins:hover{
+
+    color: #0055DC ;
+}
+.cta-header-ins a:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0055DC;
+    background: white;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    font-size: 1.5rem;
+    height: 45px;
+}
 .cta-header-con {
     display: flex;
     justify-content: center;
@@ -92,14 +108,36 @@
 }
 .cta-header-con a {
     color: white;
-
 }
+.cta-header-con a:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background: #0055DC;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    font-size: 1.5rem;
+    height: 45px;
+}
+
 .cta-header-ins a {
     color: white;
 }
 .cta-fleche {
     position: absolute;
     top:90%;
+}
+.cta-fleche img:hover{
+    background-color: black;
+    border-radius: 50%;
+
+    width: 100%;
+
+}
+.cta-fleche :hover{
+
 }
 /*Container-a-pro*/
 .container-pro {
@@ -173,7 +211,7 @@
 .logo i:hover{
     box-shadow: 1px 2px 10px  4px white;
     background-color: white;
-    border-radius: 7%;
+    border-radius: 50%;
     color: #2F469A ;
     font-size: 2rem;
 }
@@ -652,7 +690,32 @@
 #connexion .container.right-panel-active .overlay {
     transform: translateX(50%);
 }
-
+#connexion #connexion_subm{
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: #2F469A;
+    color: white;;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+}
+#connexion #connexion_subm:hover{
+    border-radius: 20px;
+    border: 1px solid #2F469A;
+    background-color:white;
+    color:  #2F469A;;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+}
 #connexion .overlay-panel {
     position: absolute;
     display: flex;
@@ -1053,7 +1116,7 @@
     font-size: 12px;
 }
 
-button {
+#inscription button  {
     border-radius: 20px;
     border: 1px solid white;
     background-color: #2F469A;
@@ -1066,6 +1129,15 @@ button {
     transition: transform 80ms ease-in;
     cursor: pointer;
 }
+
+#inscription button :hover{
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: white;
+    color: #2F469A;
+
+}
+
 #inscription  form button{
     border-radius: 20px;
     border: 1px solid #2F469A;
@@ -1098,14 +1170,45 @@ button {
     text-align: center;
 }
 #inscription form input{
-   background-color: #e8f0fe;
+    background-color: #e8f0fe;
     border: none;
+}
+#submit_insc{
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: #2F469A;
+    color:#2F469A;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+}
+#submit_insc:hover{
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: #2F469A;
+    color: white;;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
 }
 .separator_form{
     width: 8rem;
     height: 2px;
     background-color: #2F469A;
     border-radius: 7%;
+}
+#inscription .error{
+    color: red;
+    display: flex;
+    margin-top: 0.5rem;
 }
 #inscription .container {
     background-color: #fff;
@@ -1188,7 +1291,19 @@ button {
     margin-top: 0.5rem;
 
 }
-
+#signUp{
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: #2F469A;
+    color: white;;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+}
 
 
 /*Contact - Thibault Coge*/

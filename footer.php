@@ -7,9 +7,9 @@
     </div>
     <div class="logo">
        <ul>
-           <li><a href=""><i class="fab fa-twitter"></i></a></li>
-           <li><a href=""><i class="fab fa-facebook"></a></i></li>
-           <li><a href=""><i class="fab fa-instagram"></a></i></li>
+           <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+           <li><a href="#"><i class="fab fa-facebook"></a></i></li>
+           <li><a href="#"><i class="fab fa-instagram"></a></i></li>
        </ul>
 
     </div>

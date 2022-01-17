@@ -82,21 +82,20 @@ function requestVerifLogin($email){
     return $query->fetch();
 }
 
-//function isLogged()
-//{
-//    if(!empty($_SESSION['user'])) {
-//        if (!empty($_SESSION['user']['id'])) {
-//            if (!empty($_SESSION['user']['email'])) {
-//                    if (!empty($_SESSION['user']['status'])) {
-//                        if (!empty($_SESSION['user']['ip'])) {
-//                            if ($_SESSION['user']['ip'] == $_SERVER['REMOTE_ADDR']) {
-//                                return true;
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
-//    return false;
-//}
+function isLogged()
+{
+    if(!empty($_SESSION['user'])) {
+        if (!empty($_SESSION['user']['id'])) {
+            if (!empty($_SESSION['user']['email'])) {
+                                if (!empty($_SESSION['user']['status'])) {
+                                    if (!empty($_SESSION['user']['ip'])) {
+                                        if ($_SESSION['user']['ip'] == $_SERVER['REMOTE_ADDR']) {
+                                            return true;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+    return false;
+}
