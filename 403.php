@@ -16,14 +16,13 @@
         <div class="notfound-403">
             <h1>4<span>0</span>3</h1>
         </div>
-        <h2>Vous devez être connecté pour l'accès a cette page.</h2>
+        <h2>Accès refusé</h2>
         <div class="notfound-connexion">
-            <div class="btn-error">
-                <a href="connexion.php"></a>
-                <button class="btn-404-403">Connexion</button>
-            </div>
+            <p>Vous n'avez pas les droits d'accès à cette page</p>
+            <a href="index.php"><button class="btn-404-403">Retour accueil</button></a>
         </div>
     </div>
+</div>
 </div>
 </body>
 
