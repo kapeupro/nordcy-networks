@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('inc/header.php');
 ?>
 
@@ -17,7 +18,7 @@ include('inc/header.php');
         </div>
         <div class="cta-fleche">
             <!-- Ajout par la suite l'animations avec le boutton-->
-            <img src="asset/img/fleche.svg" alt="fleche">
+            <a href="#container-a-pro"> <img src="asset/img/fleche.svg" alt="fleche"></a>
         </div>
     </div>
 </section>
@@ -48,10 +49,10 @@ include('inc/header.php');
         </div>
         <div class="item-logo-partenaire">
             <ul>
-                <li><img src="asset/img/23andMe_Logo.png" alt=""></li>
-                <li><img src="asset/img/R.png" alt=""></li>
-                <li><img src="asset/img/R2.png" alt=""></li>
-                <li><img src="asset/img/R65.png" alt=""></li>
+                <li><img src="asset/img/23andMe_Logo.png" alt="" class="andme"></li>
+                <li><img src="asset/img/R.png" alt="" class="R"></li>
+                <li><img src="asset/img/R2.png" alt="" class="R2"></li>
+                <li><img src="asset/img/R65.png" alt="" class="R65"></li>
             </ul>
         </div>
 
@@ -89,5 +90,5 @@ include('inc/header.php');
 
 
 
-<?php include ('inc/footer.php');
+<?php include('footer.php');
 ?>

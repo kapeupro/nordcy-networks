@@ -99,7 +99,7 @@
 }
 .cta-fleche {
     position: absolute;
-    top: 92%;
+    top:90%;
 }
 /*Container-a-pro*/
 .container-pro {
@@ -206,9 +206,12 @@
 }
 .item-logo-partenaire img{
     width: 100%;
-    padding: 1rem;
+    filter: grayscale(100%);
 }
-
+.item-logo-partenaire img:hover{
+    filter: grayscale(0%);
+    width: 110%;
+}
 
 /*Mentions légal*/
 
@@ -259,6 +262,8 @@
     position: relative;
     height: 100vh;
     background: #f6f6f6;
+
+
 }
 
 #notfound .notfound {
@@ -364,7 +369,6 @@
 
 .btn-404-403:hover{
     background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
@@ -1028,7 +1032,7 @@
     color: white;
     display: flex;
     justify-content: left;
-    margin-left: 4.5rem;
+    margin-left: 5.5rem;
     padding-top: 5rem;
 }
 #inscription .text_connect button{
@@ -1336,4 +1340,82 @@ button {
     text-align: center;
     color: white;
     background-color: #2F469A;
+}
+
+
+
+
+
+
+/*Headerdash - Thibault*/
+#headerdash {
+    padding-top: 1.5rem;
+}
+#headerdash .wrap{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+#headerdash .header_title {
+    font-size: 2rem;
+}
+#headerdash .header_title .nordcy {
+    text-align: center;
+}
+#headerdash .header_nav {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    padding: 1rem;
+}
+#headerdash .header_nav a{
+    color: black;
+    padding: 2rem;
+    font-size: 2rem;
+}
+#headerdash .header_nav a:hover {
+    text-decoration: underline #2F469A;
+}
+
+/*Dashboard - Thibault*/
+
+#dashboard {
+    padding: 5rem;
+}
+#dashboard .dashboard_container1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+#dashboard .dashboard_buttons {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 25%;
+}
+#dashboard .dashboard_buttons a {
+    padding: 2rem 7rem;
+    border: none;
+    background-color: white;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+#dashboard .dashboard_buttons a:hover{
+    text-decoration: underline #2F469A;
+}
+#dashboard .dashboard_btn {
+    padding: 3rem;
+}
+#dashboard .logs_btn {
+    padding: 3rem;
+}
+#dashboard .details_btn {
+    padding: 3rem;
+}
+#dashboard .dashboard_graph {
+    background-color: #029bc1;
+    width: 75%;
+}
+#dashboard .dashboard_container2 {
+    background-color: lime;
 }

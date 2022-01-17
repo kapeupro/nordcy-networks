@@ -326,4 +326,4 @@ include('inc/header.php');
     </p>
 </div>
 
-<?php include ('inc/footer.php');
+<?php include ('footer.php');

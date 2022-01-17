@@ -52,10 +52,6 @@ function emailValidation($errors,$email,$key)
     return $errors;
 }
 
-<<<<<<< HEAD
-=======
-
-
 function generateRandomString($length = 10) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength = strlen($characters);
@@ -66,4 +62,41 @@ function generateRandomString($length = 10) {
     return $randomString;
 }
 
->>>>>>> e89ddfa69c06a0b1bc1917249582391841176760
+function mailValidation($errors,$value,$key){
+    if(!empty($value)){
+        if (filter_var($value, FILTER_VALIDATE_EMAIL)==false) {
+            $errors[$key]='Veuillez renseigner un email valide';
+        }
+    } else{
+        $errors[$key]='Veuillez renseigner ce champ';
+    }
+    return $errors;
+}
+
+function requestVerifLogin($email){
+    global $pdo;
+    $sql = "SELECT * FROM nordcynetwork_user WHERE email = :email";
+    $query = $pdo->prepare($sql);
+    $query->bindValue(':email',$email,PDO::PARAM_STR);
+    $query->execute();
+    return $query->fetch();
+}
+
+//function isLogged()
+//{
+//    if(!empty($_SESSION['user'])) {
+//        if (!empty($_SESSION['user']['id'])) {
+//            if (!empty($_SESSION['user']['email'])) {
+//                    if (!empty($_SESSION['user']['status'])) {
+//                        if (!empty($_SESSION['user']['ip'])) {
+//                            if ($_SESSION['user']['ip'] == $_SERVER['REMOTE_ADDR']) {
+//                                return true;
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+//    return false;
+//}
