@@ -1526,7 +1526,7 @@
 #dashboard .dashboard_container0 {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 #dashboard .dashboard_container2 {
     width: 930px;
