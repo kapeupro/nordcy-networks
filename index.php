@@ -31,7 +31,6 @@ include('inc/header.php');
             <div class="item-pro-0">
                 <h2>
                     A propos de <br>Nordcy Network
-                    <hr>
                 </h2>
             </div>
             <div class="item-pro-1">
@@ -50,7 +49,6 @@ include('inc/header.php');
         <div class="container-partenaire">
             <div class="item-partenaire">
                 <h2> Des millions de propriétés <br> Internet nous font confiance </h2>
-                <hr>
             </div>
             <div class="item-logo-partenaire">
                 <div class="logo-partenaire">
