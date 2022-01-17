@@ -4,7 +4,7 @@ session_start();
 include ('inc/headerdash.php')
 ?>
 <section id="dashboard">
-    <div class="wrap">
+    <div class="dashboard_container0">
         <div class="dashboard_container1">
             <div class="dashboard_buttons">
                 <div class="dashboard_btn">
@@ -17,12 +17,15 @@ include ('inc/headerdash.php')
                     <a href="#">Détails</a>
                 </div>
             </div>
-            <div class="dashboard_graph">
-                <!--Graph 1-->
-            </div>
         </div>
         <div class="dashboard_container2">
-            <!--Graph 2-->
+            <div class="dashboard_graph">
+                <!--Graph 1-->
+                <img src="https://images2.alphacoders.com/100/1003880.png" height="500px" width="1100px" alt="">
+            </div>
         </div>
+    </div>
+    <div class="dashboard_container2">
+        <!--TABLEAU MATHIS-->
     </div>
 </section>

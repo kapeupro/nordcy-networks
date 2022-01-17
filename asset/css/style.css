@@ -1236,7 +1236,6 @@ button {
     flex-flow: column wrap;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    width: 25%;
 }
 #dashboard .dashboard_buttons a {
     padding: 2rem 7rem;
@@ -1248,19 +1247,11 @@ button {
 #dashboard .dashboard_buttons a:hover{
     text-decoration: underline #2F469A;
 }
-#dashboard .dashboard_btn {
+#dashboard .dashboard_btn, .logs_btn, .details_btn  {
     padding: 3rem;
 }
-#dashboard .logs_btn {
-    padding: 3rem;
-}
-#dashboard .details_btn {
-    padding: 3rem;
-}
-#dashboard .dashboard_graph {
-    background-color: #029bc1;
-    width: 75%;
-}
-#dashboard .dashboard_container2 {
-    background-color: lime;
+#dashboard .dashboard_container0 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }
