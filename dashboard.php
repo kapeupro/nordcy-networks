@@ -25,7 +25,4 @@ include ('inc/headerdash.php')
             </div>
         </div>
     </div>
-    <div class="dashboard_container2">
-        <!--TABLEAU MATHIS-->
-    </div>
 </section>
