@@ -1528,3 +1528,6 @@
     align-items: center;
     justify-content: space-between;
 }
+#dashboard .dashboard_container2 {
+    width: 930px;
+}
