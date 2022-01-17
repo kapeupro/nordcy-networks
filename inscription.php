@@ -35,7 +35,7 @@ if (!empty($_POST['submitted'])) {
         // password
         if(!empty($password) || !empty($password2)) {
             if($password != $password2) {
-                $errors['password'] = 'Veuillez renseigner des mot de passe identiques';
+                $errors['password'] = 'Veuillez renseigner des mots de passes identiques';
             } elseif (mb_strlen($password2) < 6) {
                 $errors['password'] = 'Min 6 caractères pour votre mot de passe';
             }
@@ -71,7 +71,7 @@ include('inc/header.php');
             <div class="text_connect">
                 <h2>Si tu as déjà un compte </h2>
                 <p>Connecte toi !</p>
-                <button><a href="connexion.php">Se connecter</a></button>
+                <button> <a href="connexion.php"> Se connecter</a></button>
             </div>
 
         </div>
@@ -94,14 +94,14 @@ include('inc/header.php');
                     <span class="error"><?php if(!empty($errors['nom'])) {echo $errors['nom']; } ?></span>
 
                     <label for="password"></label>
-                    <input type="text" id="password" name="password" placeholder="Mot de passe" value="<?php if(!empty($_POST['password'])) {echo $_POST['password']; } ?>">
+                    <input type="password" id="password" name="password" placeholder="Mot de passe" value="<?php if(!empty($_POST['password'])) {echo $_POST['password']; } ?>">
                     <span class="error"><?php if(!empty($errors['password'])) {echo $errors['password']; } ?></span>
 
                     <label for="password2"></label>
-                    <input type="text" id="password2" name="password2" placeholder="Confirmer votre mot de passe" value="<?php if(!empty($_POST['password2'])) {echo $_POST['password2']; } ?>">
+                    <input type="password" id="password2" name="password2" placeholder="Confirmer votre mot de passe" value="<?php if(!empty($_POST['password2'])) {echo $_POST['password2']; } ?>">
                     <span class="error"><?php if(!empty($errors['password2'])) {echo $errors['password2']; } ?></span>
 
-                    <input type="submit" name="submitted" value="Inscription">
+                    <input type="submit" name="submitted" value="Inscription" id="submit_insc">
                 </form>
 
             <div class="overlay-container">
@@ -123,11 +123,11 @@ include('inc/header.php');
                         <span class="error"><?php if(!empty($errors['nom'])) {echo $errors['nom']; } ?></span>
 
                         <label for="password"></label>
-                        <input type="text" id="password" name="password" placeholder="Mot de passe" value="">
+                        <input type="password" id="password" name="password" placeholder="Mot de passe" value="">
                         <span class="error"><?php if(!empty($errors['password'])) {echo $errors['password']; } ?></span>
 
                         <label for="password2"></label>
-                        <input type="text" id="password2" name="password2" placeholder="Confirmer votre mot de passe" value="">
+                        <input type="password" id="password2" name="password2" placeholder="Confirmer votre mot de passe" value="">
                         <span class="error"><?php if(!empty($errors['password2'])) {echo $errors['password2']; } ?></span>
 
                         <input type="submit" name="submitted" value="Inscription">

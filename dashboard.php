@@ -25,13 +25,6 @@ include ('inc/headerdash.php')
 
                 </canvas>
             </div>
-
-
-
-        </div>
-    </div>
-    </div>
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src=asset/js/Chart.js></script>
 
