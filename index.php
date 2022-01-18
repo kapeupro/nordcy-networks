@@ -82,8 +82,8 @@ include('inc/header.php');
     </div>
     <div class="item-service-0">
         <h2>Intelligence DDoS</h2>
-        <p>Evaluez la résilience de vos services face aux attaques et bénéficiez de <br>
-            notre expertise de la menace DDoS.</p>
+        <p>Evaluez la résilience de vos services face aux attaques et bénéficiez de 
+            notre  <br> expertise de la menace DDoS.</p>
     </div>
 
     <div class="container-service">

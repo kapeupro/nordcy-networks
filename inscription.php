@@ -16,8 +16,8 @@ if (!empty($_POST['submitted'])) {
     $password2 = cleanXss('password2');
 
     // Validation
-     $errors = textValidation($error,$nom,'nom');
-      $errors = textValidation($error,$prenom,'prenom');
+    $errors = textValidation($error,$nom,'nom');
+    $errors = textValidation($error,$prenom,'prenom');
     $errors = emailValidation($error,$email,'email');
 
 
@@ -52,18 +52,18 @@ if (!empty($_POST['submitted'])) {
         // hashpassword
         $hashpassword = password_hash($password,PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO `nordcynetwork_user`( `nom` , `prenom` ,`email`,`password`,`token`,`status`,`created_at`) 
+        $sql = "INSERT INTO `nordcynetwork_user`(`nom`,`prenom`,`email`,`password`,`token`,`status`,`created_at`) 
                 VALUES (:nom,:prenom,:email,:password,:token,'user',NOW())";
         $query = $pdo->prepare($sql);
-        $query->bindValue(':nom',$nom,PDO::PARAM_STR);
-        $query->bindValue(':prenom',$prenom,PDO::PARAM_STR);
+        $query->bindValue(':nom',        $nom,PDO::PARAM_STR);
+        $query->bindValue(':prenom',     $prenom,PDO::PARAM_STR);
         $query->bindValue(':email',      $email,       PDO::PARAM_STR);
         $query->bindValue(':password',   $hashpassword,PDO::PARAM_STR);
         $query->bindValue(':token',      $token,       PDO::PARAM_STR);
         $query->execute();
         // redirection
         $success=true;
-
+        header('refresh:5;url=index.php');
         echo('Félicitations vous allez etre rediriger dans 5 seconde vers la page accueil');
     }
 }
