@@ -111,8 +111,8 @@ include('inc/header.php');
 
                         <input type="submit" name="submitted" value="Inscription">
                     </form>
-<?}?>
                 </div>
     </section>
-
-<?php include('footer.php');?>
+<?php } 
+include('footer.php');
+?>
