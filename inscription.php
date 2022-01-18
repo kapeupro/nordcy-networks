@@ -51,9 +51,12 @@ if (!empty($_POST['submitted'])) {
             // hashpassword
             $hashpassword = password_hash($password,PASSWORD_DEFAULT);
 
-            $sql = "INSERT INTO `nordcynetwork_user`(  `email`,`password`, `token`,`status`, `created_at`) 
-                VALUES (:email,:password,:token,'user',NOW())";
+            $sql = "INSERT INTO `nordcynetwork_user`( 'nom', 'prenom', `email`,`password`, `token`,`status`, `created_at`) 
+                VALUES (:nom, :prenom, :email,:password,:token,'user',NOW())";
             $query = $pdo->prepare($sql);
+            $query->bindValue(':nom',        $nom,       PDO::PARAM_STR);
+            $query->bindValue(':prenom',     $prenom,       PDO::PARAM_STR);
+            $query->bindValue(':email',      $email,       PDO::PARAM_STR);
             $query->bindValue(':email',      $email,       PDO::PARAM_STR);
             $query->bindValue(':password',   $hashpassword,PDO::PARAM_STR);
             $query->bindValue(':token',      $token,       PDO::PARAM_STR);

@@ -1,6 +1,15 @@
 <?php
 session_start();
 
+if (empty($_SESSION['user']['id']))
+{
+    header('Location: 404.php');
+}
+else {
+    var_dump($_SESSION['user']);
+}
+
+
 include ('inc/headerdash.php')
 ?>
 <section id="dashboard">
