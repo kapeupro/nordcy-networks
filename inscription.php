@@ -41,10 +41,7 @@ if (!empty($_POST['submitted'])) {
         } else {
             $errors['password'] = 'Veuillez renseigner un mot de passe';
         }
-    } else {
-        $errors['password'] = 'Veuillez renseigner un mot de passe';
-
-    }
+        
     if(count($errors) == 0) {
 
         // generate token
@@ -65,10 +62,12 @@ if (!empty($_POST['submitted'])) {
             $query->execute();
             // redirection
             $success=true;
-            
+
+        {
             echo('Félicitations vous allez etre rediriger dans 5 seconde vers la page accueil');
 
-}
+        }
+
 include('inc/header.php');
 ?>
 <section id="inscription">
@@ -109,6 +108,8 @@ include('inc/header.php');
 
                     <input type="submit" name="submitted" value="Inscription">
                 </form>
+
+            </div>
 
     </section>
 
