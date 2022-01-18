@@ -8,13 +8,13 @@ include ('inc/headerdash.php')
         <div class="dashboard_container1">
             <div class="dashboard_buttons">
                 <div class="dashboard_btn">
-                    <a href="#">Dashboard</a>
+                    <a href="dashboard.php">Dashboard</a>
                 </div>
                 <div class="logs_btn">
-                    <a href="#">Logs</a>
+                    <a href="logs.php">Logs</a>
                 </div>
                 <div class="details_btn">
-                    <a href="#">Détails</a>
+                    <a href="detail.php">Détails</a>
                 </div>
             </div>
         </div>

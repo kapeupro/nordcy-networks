@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 ?>
 
     <!doctype html>
@@ -22,8 +22,8 @@ session_start();
         <div class="header-nav">
             <nav>
                 <ul>
-                    <li><a href="index.php">Accueil</a></li>
-                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="indexclient.php">Accueil</a></li>
+                    <li><a href="dashboard.php">Dashboard</a></li>
                     <li><a href="contact.php">Contact</a></li>
                     <li><a href="deconnexion.php">Déconnexion</a></li>
 
