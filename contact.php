@@ -32,7 +32,7 @@ include ('inc/header.php'); ?>
                     <input type="email" placeholder="Email*" id="email" name="email" value="<?= recupInputValue('email'); ?>">
                     <span class="error"><?php if(!empty($errors['email'])) {echo $errors['email']; } ?></span>
                     <label for="message"></label>
-                    <textarea id="message" name="message"><?=recupInputValue('message');?> </textarea>
+                    <textarea id="message" name="message" placeholder="Votre Message.."><?=recupInputValue('message');?> </textarea>
                     <span class="error"><?php if(!empty($errors['message'])) {echo $errors['message']; } ?></span>
 
                     <input type="submit" name="submitted" value="ENVOYER">
