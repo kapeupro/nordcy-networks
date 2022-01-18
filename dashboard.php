@@ -20,18 +20,11 @@ include ('inc/headerdash.php')
         </div>
         <div class="dashboard_container2">
             <!-- canvas -->
-        <div>
-            <canvas id="myChart">
-                
-            </canvas>
-        </div>
-                
+            <div>
+                <canvas id="myChart">
 
-                
+                </canvas>
             </div>
-        </div>
-    </div>
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src=asset/js/Chart.js></script>
 

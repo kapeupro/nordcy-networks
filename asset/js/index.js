@@ -1,4 +1,4 @@
-console.log('caca')
+console.log('test')
 
 const inscription = $('#inscription')
 
