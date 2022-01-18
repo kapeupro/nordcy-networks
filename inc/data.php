@@ -11,6 +11,7 @@ $json = file_get_contents($json_url);
 $data = json_decode(($json));
 debug($data);
 echo $data[13]->protocol->type;echo '<br>'; 
+
 foreach($data as $trame)  
  {
     echo $trame->date; echo '<br>'; // 1
@@ -32,3 +33,7 @@ foreach($data as $trame)
     echo $trame->ip->from; echo '<br>'; // 17
     echo $trame->ip->dest; echo '<br>';  // 18    
  } 
+
+    $query = $pdo->prepare($sql);
+    $query->binValue('data', $data);
+    $query->binValue('version', $version);
