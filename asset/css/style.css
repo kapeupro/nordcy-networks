@@ -22,9 +22,9 @@
     font-size: 22px;
     font-weight: lighter;
 }
-.header-nav ul  li   :hover{
+.header-nav ul  li :hover{
     text-decoration: underline #2F469A;
-}
+} 
 
 .header-nav nav {
     align-items: center;
@@ -159,6 +159,7 @@
     font-size: larger;
 }
 /*Service*/
+
 #service {
     display: flex;
     justify-content: center;
@@ -187,10 +188,10 @@
 }
 
 /*footer*/
-#footer{
+
+#footer {
     background-color: #2F469A;
 }
-/*Attention a ton footer , p , a il me fais bug sur ma partir si tu peux regarder comment modifier le truc merci ;) */
 
 .container-footer {
     display: flex;
@@ -198,7 +199,6 @@
     align-items: center;
     color: white;
     padding-top: 2rem;
-    font-size: 15px;
 }
 #footer a:hover{
     text-decoration: underline;
@@ -221,6 +221,7 @@
     padding: 1rem;
 
 }
+
 /*Partenaire*/
 
 .container-partenaire {
@@ -272,7 +273,7 @@
 
 }
 
-/*cookies*/
+/* Données personnelles et cookies */
 
 .particookies{
     display: flex;
@@ -292,15 +293,14 @@
     Vertical-align: Top;
     font-weight: lighter;
 }
+*/
 
-/*Error 403*/
+/*Page Error 403*/
 
 #notfound {
     position: relative;
     height: 100vh;
     background: #f6f6f6;
-
-
 }
 
 #notfound .notfound {
@@ -343,7 +343,7 @@
     color: #6878ab;
 }
 
-/*code page 404*/
+/*Page error 404*/
 
 .notfound .notfound-404 {
     position: relative;
@@ -505,7 +505,6 @@
     text-align: center;
 }
 
-
 #connexion input {
     background-color: #eee;
     border: none;
@@ -551,8 +550,6 @@
 }
 #connexion .sign-up-container:hover{
     background-color: white;
-
-
 }
 
 #connexion .container.right-panel-active .sign-up-container {
@@ -661,18 +658,20 @@
     justify-content: center;
     padding: 4rem;
 }
+
 #tableau_logs{
     box-shadow: 10px 10px 20px 0px  #2f469a;;
     border: 1px black solid ;
 
 }
+
 .table_div{
     background-color: black;
 }
+
 #tableau_logs .head_table th{
     background-color: #2f469a;
     border: 1px black solid ;
-
 }
 
 #tableau_logs .body_table td {
@@ -682,19 +681,21 @@
 
 
 }
+
 td:nth-child(even) {
     background-color: #2f469a;
     color: white;
 
 }
+
 th:nth-child(even) {
     background-color: #2f469a;
     color: white;
 
 }
-th {
 
-    width:40px;
+th {
+    width:200px;
 }
 
 #inscription {
@@ -711,11 +712,7 @@ th {
     font-weight: bold;
 
 }
-#inscription .text_connect{
-    /*
-    background-color: #2e59d9 ;
-    */
-}
+
 #inscription .connect_wrap{
     height: 100%;
     background-color: #2F469A;
@@ -727,7 +724,6 @@ th {
     margin-left: 10rem;
     padding-top: 2rem;
     padding-bottom: 2.5rem;
-    /*padding-top: 5rem;*/
 }
 
 #inscription .text_connect h2{
@@ -741,13 +737,11 @@ th {
     margin-left: 6.5rem;
 }
 
-
 #inscription p {
     font-size: 14px;
     font-weight: 100;
     line-height: 3rem;
     letter-spacing: 0.5px;
-    /*margin: 20px 0 30px;*/
 }
 
 #inscription span {
@@ -788,6 +782,7 @@ th {
     cursor: pointer;
     margin-top: 1.5rem;
 }
+
 #inscription  form button a {
     color : #2F469A;
 }
@@ -807,10 +802,12 @@ th {
     height: 100%;
     text-align: center;
 }
+
 #inscription form input{
     background-color: #e8f0fe;
     border: none;
 }
+
 #submit_insc{
     border-radius: 20px;
     border: 1px solid white;
@@ -824,6 +821,7 @@ th {
     transition: transform 80ms ease-in;
     cursor: pointer;
 }
+
 #submit_insc:hover{
     border-radius: 20px;
     border: 1px solid white;
@@ -837,17 +835,20 @@ th {
     transition: transform 80ms ease-in;
     cursor: pointer;
 }
+
 .separator_form{
     width: 8rem;
     height: 2px;
     background-color: #2F469A;
     border-radius: 7%;
 }
+
 #inscription .error{
     color: red;
     display: flex;
     margin-top: 0.5rem;
 }
+
 #inscription .container {
     background-color: #fff;
     border-radius: 10px;
@@ -877,6 +878,7 @@ th {
     opacity: 0;
     z-index: 1;
 }
+
 #inscription .sign-up-container:hover{
     background-color: white;
 
@@ -906,17 +908,20 @@ th {
     height: 100%;
     width: 200%;
 }
+
 #inscription .formulaire_insc{
     width: 50%;
 
     background-size: cover;
 
 }
+
 #inscription .formulaire_insc input{
     padding: 1rem;
     margin-top: 0.5rem;
 
 }
+
 #signUp{
     border-radius: 20px;
     border: 1px solid white;
@@ -1141,4 +1146,17 @@ th {
 }
 #dashboard .dashboard_container2 {
     width: 930px;
+}
+
+/*Dimitri Footer 18.01.2022*/
+.item-footer-0 {    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.item-footer-1 {
+  
+    display: flex;
+    padding: 0.8rem;
 }

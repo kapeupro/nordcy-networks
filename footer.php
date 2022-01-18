@@ -1,10 +1,17 @@
 
 <footer id="footer">
     <div class="container-footer">
-        <p>&copy; NORDCY NETWORK SAS 2010-2021 -30 Pl. Henri Gadeau de Kerville, 76100 Rouen</p>
-        <a href="mentionslegal.php">Mentions légal</a>
-        <a href="donnees-personnelles-et-cookies.php">Données personnelles et cookies</a>
+      <div class="item-footer-0">
+            <p>Copyright © 2019 - <a href="https://www.nordcynetwork.com">Nordcy Network</a> - Tous droits réservés</p>
+
+        <div class="item-footer-1">   
+            <ul>
+                <li><a href="mentionslegal.php">Mentions légal</a></li>
+                <li><a href="donnees-personnelles-et-cookies.php">Données personnelles et cookies</a></li>
+            </ul>
+      </div>
     </div>
+
     <div class="logo">
        <ul>
            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
