@@ -187,41 +187,38 @@
     justify-content: flex-end;
 }
 
-/*footer*/
+ /*Service*/
 
-#footer {
-    background-color: #2F469A;
+ #service {
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
 }
-
-.container-footer {
+.container-service {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    color: white;
-    padding-top: 2rem;
 }
-#footer a:hover{
-    text-decoration: underline;
+.item-service-0  {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    margin: 2rem;
+    padding: 2rem;
 }
-.logo a{
-    font-size: 2rem;
-    color: white;
+
+.item-service-1  {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    margin: 2rem;
+    padding: 2rem;
 }
-.logo i:hover{
-    box-shadow: 1px 2px 10px  4px white;
-    background-color: white;
-    border-radius: 50%;
-    color: #2F469A ;
-    font-size: 2rem;
-}
-.logo ul{
-    margin-top: 1rem;
+.item-service-1 h2{
     display: flex;
-    justify-content: flex-end;
-    padding: 1rem;
-
+    justify-content: center;
 }
-
+.item-service-0 h2 {
+    display: flex;
+    justify-content: center;
+} 
 /*Partenaire*/
 
 .container-partenaire {
@@ -1149,6 +1146,41 @@ th {
 }
 
 /*Dimitri Footer 18.01.2022*/
+
+
+#footer {
+    background-color: #2F469A;
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding-top: 2rem;
+}
+#footer a:hover{
+    text-decoration: underline;
+}
+.logo a{
+    font-size: 2rem;
+    color: white;
+}
+.logo i:hover{
+    box-shadow: 1px 2px 10px  4px white;
+    background-color: white;
+    border-radius: 50%;
+    color: #2F469A ;
+    font-size: 2rem;
+}
+.logo ul{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+
+}
+
 .item-footer-0 {    
     display: flex;
     flex-direction: column;

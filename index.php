@@ -91,9 +91,10 @@ include('inc/header.php');
                 de vos services aux utilisateurs, et prévenir infections et fuites de données.</p>
         </div>
     </div>
-</section>
-<script src="asset/js/ajax.js">
-    
-</script>
+</section> 
+
+<script src="asset/js/ajax.js"></script>
+
+
 <?php include('footer.php');
 ?>
