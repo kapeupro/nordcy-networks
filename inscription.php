@@ -16,6 +16,8 @@ if (!empty($_POST['submitted'])) {
     $password2 = cleanXss('password2');
 
     // Validation
+     $errors = textValidation($error,$nom,'nom');
+      $errors = textValidation($error,$prenom,'prenom');
     $errors = emailValidation($error,$email,'email');
 
 
