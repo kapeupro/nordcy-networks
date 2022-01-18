@@ -110,6 +110,8 @@ include('inc/header.php');
                 </form>
 
             </div>
+        </div>
+    </div>
 
     </section>
 
