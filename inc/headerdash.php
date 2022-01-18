@@ -21,9 +21,9 @@
         </div>
         <div class="header_nav">
             <a href="index.php">Accueil</a>
-            <a href="#">Dashboard</a>
-            <a href="#">Logs</a>
-            <a href="#">Détails</a>
+            <a href="dashboard.php">Dashboard</a>
+            <a href="logs.php">Logs</a>
+            <a href="detail.php">Détails</a>
             <a href="#">Déconnexion</a>
         </div>
     </div>
