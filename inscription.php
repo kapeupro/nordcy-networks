@@ -41,10 +41,7 @@ if (!empty($_POST['submitted'])) {
         } else {
             $errors['password'] = 'Veuillez renseigner un mot de passe';
         }
-    } else {
-        $errors['password'] = 'Veuillez renseigner un mot de passe';
-
-    }
+        
     if(count($errors) == 0) {
 
         // generate token
@@ -109,37 +106,6 @@ include('inc/header.php');
                     <input type="submit" name="submitted" value="Inscription">
                 </form>
 
-
-            <div class="overlay-container">
-                <div class="overlay">
-
-                    <form action="" method="post" class="formulaire_insc">
-                        <p>Bienvenue sur notre site !</p>
-                        <div class="separator_form"></div>
-                        <label for="prenom"</label>
-                        <input type="text" id="prenom" name="prenom" placeholder="Prénom" value="<?=recupInputValue('prenom');?>">
-                        <span class="error"><?php if(!empty($errors['prenom'])) {echo $errors['prenom']; } ?></span>
-
-                        <label for="nom"></label>
-                        <input type="text" id="nom" name="nom" placeholder="nom" value="<?=recupInputValue('nom');?>">
-                        <span class="error"><?php if(!empty($errors['nom'])) {echo $errors['nom']; } ?></span>
-
-                        <label for="email"></label>
-                        <input type="email" id="email" name="email" placeholder="E-mail" value="<?=recupInputValue('email');?>">
-                        <span class="error"><?php if(!empty($errors['nom'])) {echo $errors['nom']; } ?></span>
-
-                        <label for="password"></label>
-                        <input type="text" id="password" name="password" placeholder="Mot de passe" value="">
-                        <span class="error"><?php if(!empty($errors['password'])) {echo $errors['password']; } ?></span>
-
-                        <label for="password2"></label>
-                        <input type="text" id="password2" name="password2" placeholder="Confirmer votre mot de passe" value="">
-                        <span class="error"><?php if(!empty($errors['password2'])) {echo $errors['password2']; } ?></span>
-
-                        <input type="submit" name="submitted" value="Inscription">
-                    </form>
-
-                </div>
             </div>
     </section>
 
