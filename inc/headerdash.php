@@ -24,7 +24,11 @@
             <a href="dashboard.php">Dashboard</a>
             <a href="logs.php">Logs</a>
             <a href="detail.php">Détails</a>
+
+            <a href="#">Déconnexion</a>
+
             <a href="deconnexion.php">Déconnexion</a>
+
         </div>
     </div>
 </section>

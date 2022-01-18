@@ -797,23 +797,48 @@
 
 
 
+/*Tableau log*/
+
+#tableau{
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+}
+#tableau_logs{
+    box-shadow: 10px 10px 20px 0px  #2f469a;;
+    border: 1px black solid ;
+
+}
+.table_div{
+    background-color: black;
+}
+#tableau_logs .head_table th{
+    background-color: #2f469a;
+    border: 1px black solid ;
+
+}
+
+#tableau_logs .body_table td {
+    border: 1px black solid ;
+    font-size: 1.5rem;
+    box-shadow: 5px 5px 20px 0px  black
 
 
+}
+td:nth-child(even) {
+    background-color: #2f469a;
+    color: white;
 
+}
+th:nth-child(even) {
+    background-color: #2f469a;
+    color: white;
 
+}
+th {
 
-
-
-
-
-
-
-
-
-
-
-
-
+    width:40px;
+}
 
 
 
