@@ -800,12 +800,17 @@
 /*Tableau log*/
 
 #tableau{
-
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
 }
 #tableau_logs{
     box-shadow: 10px 10px 20px 0px  #2f469a;;
     border: 1px black solid ;
 
+}
+.table_div{
+    background-color: black;
 }
 #tableau_logs .head_table th{
     background-color: #2f469a;
