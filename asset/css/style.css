@@ -158,35 +158,6 @@
     padding: 4rem;
     font-size: larger;
 }
-/*Service*/
-
-#service {
-    display: flex;
-    justify-content: center;
-    padding: 4rem;
-}
-.container-service {
-    display: flex;
-    flex-direction: column;
-}
-.item-service-0  {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 10px;
-    margin: 2rem;
-    padding: 2rem;
-}
-
-.item-service-1  {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 10px;
-    margin: 2rem;
-    padding: 2rem;
-}
-.item-service-1 h2{
-    display: flex;
-    justify-content: flex-end;
-}
-
  /*Service*/
 
  #service {
@@ -221,32 +192,47 @@
 } 
 /*Partenaire*/
 
+#vh {
+    display: flex;
+    width: 100vh;
+}
+.logo-partenaire {
+    padding: 5rem;
+}
 .container-partenaire {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 2rem;
 }
 .item-partenaire {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-    width: 45%;
+    padding: 1rem;
+    text-align: center;
 }
 .item-logo-partenaire {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
-    width: 45%;
+    width: 85%;
+
 }
 .item-logo-partenaire img{
+    margin: 1rem;
     width: 100%;
     filter: grayscale(100%);
 }
 .item-logo-partenaire img:hover{
     filter: grayscale(0%);
-    width: 110%;
 }
+.item-logo-partenaire ul {
+    display: flex;
+    align-items: center;
+    width: 50%;
+
+} 
 
 /*Mentions légal*/
 
