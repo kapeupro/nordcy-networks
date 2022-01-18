@@ -37,7 +37,7 @@ else {
                     <a href="#container-a-pro"> <img src="asset/img/fleche.svg" alt="fleche"></a>
                 </div>
             </div>
-     
+
             <div class="cta-fleche">
                 <!-- Ajout par la suite l'animations avec le boutton-->
                 <a href="#container-a-pro"> <img src="asset/img/fleche.svg" alt="fleche" ></a>
