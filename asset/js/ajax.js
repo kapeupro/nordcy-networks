@@ -7,6 +7,7 @@ fetch('http://localhost/nordcy-networks/nordcydata.php')
         console.log(data[0]);
         console.log(data[0].version);
         // ici il y aura le chart.js
+
 });
 
 alert("Hello");

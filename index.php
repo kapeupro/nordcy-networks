@@ -94,6 +94,6 @@ include('inc/header.php');
         </div>
     </div>
 </section>
-<script src="asset/js/ajax.js"></script>
+<script  src="asset/js/ajax.js"></script>
 <?php include('footer.php');
 ?>
