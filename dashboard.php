@@ -1,12 +1,13 @@
 <?php
 session_start();
 
+
 if (empty($_SESSION['user']['id']))
 {
     header('Location: 404.php');
 }
 else {
-    var_dump($_SESSION['user']);
+    //var_dump($_SESSION['user']);
 }
 
 
@@ -16,6 +17,10 @@ include ('inc/headerdash.php')
     <div class="dashboard_container0">
         <div class="dashboard_container1">
             <div class="dashboard_buttons">
+                <div class="dashboard_btn">
+                    <h1 class="text-center mt-5 mb-4">Bonjour, <?= $user['prenom']; ?></h1>
+                    <h3 class="text-center"> Comment allez-vous aujourd'hui ? </h3>
+                </div>
                 <div class="dashboard_btn">
                     <a href="dashboard.php">Dashboard</a>
                 </div>
