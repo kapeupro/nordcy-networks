@@ -35,7 +35,7 @@ if (!empty($_POST['submitted'])) {
         // password
         if(!empty($password) || !empty($password2)) {
             if($password != $password2) {
-                $errors['password'] = 'Veuillez renseigner des mots de passes identiques';
+                $errors['password'] = 'Veuillez renseigner des mot de passe identiques';
             } elseif (mb_strlen($password2) < 6) {
                 $errors['password'] = 'Min 6 caractères pour votre mot de passe';
             }
@@ -51,16 +51,19 @@ if (!empty($_POST['submitted'])) {
             // hashpassword
             $hashpassword = password_hash($password,PASSWORD_DEFAULT);
 
-            $sql = "INSERT INTO `nordcynetwork_user`(  `email`,`password`, `token`,`status`, `created_at`) 
-                VALUES (:email,:password,:token,'user',NOW())";
+            $sql = "INSERT INTO `nordcynetwork_user`( `nom` , `prenom` ,`email`,`password`,`token`,`status`,`created_at`) 
+                VALUES (:nom,:prenom,:email,:password,:token,'user',NOW())";
             $query = $pdo->prepare($sql);
+            $query->bindValue(':nom',$nom,PDO::PARAM_STR);
+            $query->bindValue(':prenom',$prenom,PDO::PARAM_STR);
             $query->bindValue(':email',      $email,       PDO::PARAM_STR);
             $query->bindValue(':password',   $hashpassword,PDO::PARAM_STR);
             $query->bindValue(':token',      $token,       PDO::PARAM_STR);
             $query->execute();
             // redirection
             $success=true;
-            header('refresh:2;url=connexion.php');
+            
+            echo('Félicitations vous allez etre rediriger dans 5 seconde vers la page accueil');
         }
 }
 include('inc/header.php');
@@ -71,7 +74,7 @@ include('inc/header.php');
             <div class="text_connect">
                 <h2>Si tu as déjà un compte </h2>
                 <p>Connecte toi !</p>
-                <button> <a href="connexion.php"> Se connecter</a></button>
+                <button><a href="connexion.php">Se connecter</a></button>
             </div>
 
         </div>
@@ -94,15 +97,16 @@ include('inc/header.php');
                     <span class="error"><?php if(!empty($errors['nom'])) {echo $errors['nom']; } ?></span>
 
                     <label for="password"></label>
-                    <input type="password" id="password" name="password" placeholder="Mot de passe" value="<?php if(!empty($_POST['password'])) {echo $_POST['password']; } ?>">
+                    <input type="text" id="password" name="password" placeholder="Mot de passe" value="">
                     <span class="error"><?php if(!empty($errors['password'])) {echo $errors['password']; } ?></span>
 
                     <label for="password2"></label>
-                    <input type="password" id="password2" name="password2" placeholder="Confirmer votre mot de passe" value="<?php if(!empty($_POST['password2'])) {echo $_POST['password2']; } ?>">
+                    <input type="text" id="password2" name="password2" placeholder="Confirmer votre mot de passe" value="<?php if(!empty($_POST['password2'])) {echo $_POST['password2']; } ?>">
                     <span class="error"><?php if(!empty($errors['password2'])) {echo $errors['password2']; } ?></span>
 
-                    <input type="submit" name="submitted" value="Inscription" id="submit_insc">
+                    <input type="submit" name="submitted" value="Inscription">
                 </form>
+
 
             <div class="overlay-container">
                 <div class="overlay">
@@ -123,11 +127,11 @@ include('inc/header.php');
                         <span class="error"><?php if(!empty($errors['nom'])) {echo $errors['nom']; } ?></span>
 
                         <label for="password"></label>
-                        <input type="password" id="password" name="password" placeholder="Mot de passe" value="">
+                        <input type="text" id="password" name="password" placeholder="Mot de passe" value="">
                         <span class="error"><?php if(!empty($errors['password'])) {echo $errors['password']; } ?></span>
 
                         <label for="password2"></label>
-                        <input type="password" id="password2" name="password2" placeholder="Confirmer votre mot de passe" value="">
+                        <input type="text" id="password2" name="password2" placeholder="Confirmer votre mot de passe" value="">
                         <span class="error"><?php if(!empty($errors['password2'])) {echo $errors['password2']; } ?></span>
 
                         <input type="submit" name="submitted" value="Inscription">
