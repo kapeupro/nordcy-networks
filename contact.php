@@ -26,14 +26,14 @@ include ('inc/header.php'); ?>
                 <form action="" method="post" class="wrapform" novalidate>
                     <h1>Nous Contacter</h1>
                     <label for="prenom"></label>
-                    <input type="text" id="prenom" placeholder="Prénom" />
-                    <span class="error"></span>
+                    <input type="text" id="prenom" placeholder="Prénom" value="<?=recupInputValue('prenom');?>" />
+                    <span class="error"><?php if(!empty($errors['prenom'])) {echo $errors['prenom']; } ?></span>
                     <label for="email"></label>
                     <input type="email" placeholder="Email*" id="email" name="email" value="<?= recupInputValue('email'); ?>">
-                    <span class="error"></span>
+                    <span class="error"><?php if(!empty($errors['email'])) {echo $errors['email']; } ?></span>
                     <label for="message"></label>
-                    <input type="text" id="message" placeholder="Message" />
-                    <span class="error"></span>
+                    <textarea id="message" name="message"><?=recupInputValue('message');?> </textarea>
+                    <span class="error"><?php if(!empty($errors['message'])) {echo $errors['message']; } ?></span>
 
                     <input type="submit" name="submitted" value="ENVOYER">
                 </form>
