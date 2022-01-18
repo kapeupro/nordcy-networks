@@ -18,7 +18,7 @@ if(!empty($_POST['submitted'])){
     var_dump($user);
     if(empty($user)){
         $errors['email'] = "Aucun compte trouvé avec cet adresse mail";
-        var_dump('email no valide');
+        var_dump('email non valide');
     }
     else{
         if(password_verify($password , $user['password'] )){
@@ -37,12 +37,15 @@ if(!empty($_POST['submitted'])){
         if(count($errors) == 0) {
             var_dump('ok');
 
-            header('Location: dashboard.php');
+            header('Location: indexclient.php');/* a voir si ot met dashboard.php*/
         }
     }
 }
 
-include ('inc/header.php');
+
+
+
+    include ('inc/header.php');
 ?>
     <section id="connexion">
         <div class="container">
@@ -86,4 +89,4 @@ include ('inc/header.php');
 
 
 <?php
-include('footer.php'); ?>
+include('footer.php');

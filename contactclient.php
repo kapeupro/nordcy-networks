@@ -1,8 +1,18 @@
 <?php
-
 include('inc/function.php');
 
+session_start();
+
+if (empty($_SESSION['user']['id']))
+{
+    header('Location: 404.php');
+}
+else {
+    var_dump($_SESSION['user']);
+}
+
 $errors=array();
+
 if(!empty($_POST['submitted']))
 {
     //faille XSS
@@ -18,7 +28,10 @@ if(!empty($_POST['submitted']))
     }
 }
 debug($_POST);
-include ('inc/header.php'); ?>
+
+include ('inc/header.php');
+
+?>
 
     <section id="contact">
         <div class="container" id="container">
@@ -26,14 +39,14 @@ include ('inc/header.php'); ?>
                 <form action="" method="post" class="wrapform" novalidate>
                     <h1>Nous Contacter</h1>
                     <label for="prenom"></label>
-                    <input type="text" id="prenom" placeholder="Prénom" value="<?=recupInputValue('prenom');?>" />
-                    <span class="error"><?php if(!empty($errors['prenom'])) {echo $errors['prenom']; } ?></span>
+                    <input type="text" id="prenom" placeholder="Prénom" />
+                    <span class="error"></span>
                     <label for="email"></label>
                     <input type="email" placeholder="Email*" id="email" name="email" value="<?= recupInputValue('email'); ?>">
-                    <span class="error"><?php if(!empty($errors['email'])) {echo $errors['email']; } ?></span>
+                    <span class="error"></span>
                     <label for="message"></label>
-                    <textarea id="message" name="message" placeholder="Votre Message.."><?=recupInputValue('message');?> </textarea>
-                    <span class="error"><?php if(!empty($errors['message'])) {echo $errors['message']; } ?></span>
+                    <input type="text" id="message" placeholder="Message" />
+                    <span class="error"></span>
 
                     <input type="submit" name="submitted" value="ENVOYER">
                 </form>
@@ -52,3 +65,4 @@ include ('inc/header.php'); ?>
 
 
 <?php include('footer.php');
+
