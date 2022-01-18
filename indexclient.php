@@ -1,8 +1,22 @@
 <?php
 
+include('inc/headerclient.php');
+
 session_start();
 
-include('inc/headerclient.php');
+
+if (empty($_SESSION['user']['id']))
+    {
+        header('Location: 404.php');
+    }
+else {
+   //var_dump($_SESSION['user']);
+    }
+
+
+
+
+/*REGARDER LES FONCTIONS POUR ENLEVER LE BONTON DECONNEXION QUAND ONT EST PAS CONNECTER */
 ?>
 
     <section id="container-header">
