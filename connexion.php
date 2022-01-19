@@ -23,7 +23,8 @@ if(!empty($_POST['submitted'])){
     else{
         if(password_verify($password , $user['password'] )){
             var_dump('password verif');
-            session_start(); /* création de session*/
+            /* création de session*/
+            session_start(); 
             $_SESSION['user']=array(
                 'id'=>$user['id_user'],
                 'email' =>$user['email'],

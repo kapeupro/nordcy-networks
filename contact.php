@@ -34,7 +34,7 @@ include ('inc/header.php'); ?>
 
 
                     <label for="email"></label>
-                    <input type="email" placeholder="Email*" id="email" name="email" value="<?= recupInputValue('email'); ?>">
+                    <input type="email" placeholder="Email*" id="email" name="email" value="<?=recupInputValue('email');?>">
                     <span class="error"><?php if(!empty($errors['email'])) {echo $errors['email']; } ?></span>
                     <label for="message"></label>
 
