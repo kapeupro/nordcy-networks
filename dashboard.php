@@ -9,7 +9,7 @@ if (empty($_SESSION['user']['id']))
     header('Location: 404.php');
 }
 
-debug ($_SESSION);
+//debug ($_SESSION);
 //print_r ($_SESSION);
 
 include ('inc/headerdash.php')
@@ -41,7 +41,7 @@ include ('inc/headerdash.php')
             <div>
                 <canvas id="myChart"></canvas>
             </div>
-            
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src=asset/js/testajax.js></script>
 

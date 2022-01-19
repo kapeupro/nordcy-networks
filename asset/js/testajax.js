@@ -66,8 +66,5 @@
                             position: 'top'
                         },
                     */}
-
-                
-                let protocolchart = new Chart(protocolname, protocolconfig);
-                
+                let protocolchart = new Chart(protocolname, protocolconfig);            
             });
