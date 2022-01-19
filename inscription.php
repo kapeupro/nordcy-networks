@@ -35,6 +35,8 @@ if (!empty($_POST['submitted'])) {
     }
         }
     }
+
+
     // password
     if(!empty($password) || !empty($password2)) {
         if($password != $password2) {
@@ -65,7 +67,6 @@ if (!empty($_POST['submitted'])) {
         $query->execute();
         // redirection
         $success=true;
-         $_SESSION['email'] = $email;
         header('refresh:5;url=index.php');
         echo(' vous allez etre rediriger dans 5 seconde vers la page accueil');
 
