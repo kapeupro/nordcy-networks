@@ -55,6 +55,17 @@ function generateRandomString($length = 10) {
     return $randomString;
 }
 
+function mailValidation($errors,$value,$key){
+    if(!empty($value)){
+        if (filter_var($value, FILTER_VALIDATE_EMAIL)==false) {
+            $errors[$key]='Veuillez renseigner un email valide';
+        }
+    } else{
+        $errors[$key]='Veuillez renseigner ce champ';
+    }
+    return $errors;
+}
+
 function getUserById($id){
     global $pdo;
     $sql="SELECT * FROM nordcynetwork_user WHERE id = :id";

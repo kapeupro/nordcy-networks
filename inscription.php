@@ -106,7 +106,7 @@ include('inc/header.php');
 
                         <label for="email"></label>
                         <input type="email" id="email" name="email" placeholder="E-mail" value="<?=recupInputValue('email');?>">
-                        <span class="error"><?php if(!empty($errors['nom'])) {echo $errors['nom']; } ?></span>
+                        <span class="error"><?php if(!empty($errors['email'])) {echo $errors['email']; } ?></span>
 
                         <label for="password"></label>
                         <input type="password" id="password" name="password" placeholder="Mot de passe" value="">
