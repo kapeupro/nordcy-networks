@@ -3,16 +3,16 @@
 require_once("inc/pdo.php");
 require_once("inc/function.php");
 
-var_dump($_POST);
-$errors = array();
+//var_dump($_POST);
+$errors = [];
+//debug($errors);
 //var_dump('ok');
-
+if(!empty($_POST['user'])){
 if(!empty($_POST['submitted'])){
     $email = cleanXss('email');
     $password = cleanXss('password');
 
     //Validation
-    $errors = mailValidation($errors,$email,'email');
     $errors = textValidation($errors,$password,'password',6,20);
 
     $user = requestVerifLogin($email);
