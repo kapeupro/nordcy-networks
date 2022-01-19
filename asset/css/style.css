@@ -22,9 +22,9 @@
     font-size: 22px;
     font-weight: lighter;
 }
-.header-nav ul  li   :hover{
+.header-nav ul  li :hover{
     text-decoration: underline #2F469A;
-}
+} 
 
 .header-nav nav {
     align-items: center;
@@ -59,6 +59,7 @@
     font-size: 64px;
     text-align: center;
 }
+
 #cta {
     display: flex;
     justify-content: space-around;
@@ -136,9 +137,7 @@
     width: 100%;
 
 }
-.cta-fleche :hover{
 
-}
 /*Container-a-pro*/
 .container-pro {
     display: flex;
@@ -159,8 +158,9 @@
     padding: 4rem;
     font-size: larger;
 }
-/*Service*/
-#service {
+ /*Service*/
+
+ #service {
     display: flex;
     justify-content: center;
     padding: 4rem;
@@ -184,72 +184,55 @@
 }
 .item-service-1 h2{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
+.item-service-0 h2 {
+    display: flex;
+    justify-content: center;
+} 
+/*Partenaire*/
 
-/*footer*/
-#footer{
-    background-color: #2F469A;
+#vh {
+    display: flex;
+    width: 100vh;
 }
-/*Attention a ton footer , p , a il me fais bug sur ma partir si tu peux regarder comment modifier le truc merci ;) */
-
-.container-footer {
+.logo-partenaire {
+    padding: 5rem;
+}
+.container-partenaire {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
-    padding-top: 2rem;
-    font-size: 15px;
-}
-#footer a:hover{
-    text-decoration: underline;
-}
-.logo a{
-    font-size: 2rem;
-    color: white;
-}
-.logo i:hover{
-    box-shadow: 1px 2px 10px  4px white;
-    background-color: white;
-    border-radius: 50%;
-    color: #2F469A ;
-    font-size: 2rem;
-}
-.logo ul{
-    margin-top: 1rem;
-    display: flex;
-    justify-content: flex-end;
-    padding: 1rem;
-
-}
-/*Partenaire*/
-
-.container-partenaire {
-    display: flex;
-    align-items: center;
     justify-content: center;
+    padding: 2rem;
 }
 .item-partenaire {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-    width: 45%;
+    padding: 1rem;
+    text-align: center;
 }
 .item-logo-partenaire {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
-    width: 45%;
+    width: 85%;
+
 }
 .item-logo-partenaire img{
+    margin: 1rem;
     width: 100%;
     filter: grayscale(100%);
 }
 .item-logo-partenaire img:hover{
     filter: grayscale(0%);
-    width: 110%;
 }
+.item-logo-partenaire ul {
+    display: flex;
+    align-items: center;
+    width: 50%;
+
+} 
 
 /*Mentions légal*/
 
@@ -273,7 +256,7 @@
 
 }
 
-/*cookies*/
+/* Données personnelles et cookies */
 
 .particookies{
     display: flex;
@@ -294,14 +277,13 @@
     font-weight: lighter;
 }
 
-/*Error 403*/
+
+/*Page Error 403*/
 
 #notfound {
     position: relative;
     height: 100vh;
     background: #f6f6f6;
-
-
 }
 
 #notfound .notfound {
@@ -344,7 +326,7 @@
     color: #6878ab;
 }
 
-/*code page 404*/
+/*Page error 404*/
 
 .notfound .notfound-404 {
     position: relative;
@@ -421,90 +403,6 @@
     background-image: linear-gradient(to right,  #2F469A, #c4c4c4,#c4c4c4, #2F469A);
     box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.75);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*Connexion - Thibault Coge*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
@@ -590,7 +488,6 @@
     text-align: center;
 }
 
-
 #connexion input {
     background-color: #eee;
     border: none;
@@ -636,8 +533,6 @@
 }
 #connexion .sign-up-container:hover{
     background-color: white;
-
-
 }
 
 #connexion .container.right-panel-active .sign-up-container {
@@ -646,18 +541,6 @@
     z-index: 5;
     animation: show 0.6s;
 }
-
-#connexion @keyframes show {
-               0%, 49.99% {
-                   opacity: 0;
-                   z-index: 1;
-               }
-
-               50%, 100% {
-                   opacity: 1;
-                   z-index: 5;
-               }
-           }
 
 #connexion .overlay-container {
     position: absolute;
@@ -751,52 +634,6 @@
 #connexion .social-container {
     margin: 20px 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Tableau log*/
 
 #tableau{
@@ -804,18 +641,20 @@
     justify-content: center;
     padding: 4rem;
 }
+
 #tableau_logs{
     box-shadow: 10px 10px 20px 0px  #2f469a;;
     border: 1px black solid ;
 
 }
+
 .table_div{
     background-color: black;
 }
+
 #tableau_logs .head_table th{
     background-color: #2f469a;
     border: 1px black solid ;
-
 }
 
 #tableau_logs .body_table td {
@@ -825,264 +664,22 @@
 
 
 }
+
 td:nth-child(even) {
     background-color: #2f469a;
     color: white;
 
 }
+
 th:nth-child(even) {
     background-color: #2f469a;
     color: white;
 
 }
+
 th {
-
-    width:40px;
+    width:200px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #inscription {
     display: flex;
@@ -1098,11 +695,7 @@ th {
     font-weight: bold;
 
 }
-#inscription .text_connect{
-    /*
-    background-color: #2e59d9 ;
-    */
-}
+
 #inscription .connect_wrap{
     height: 100%;
     background-color: #2F469A;
@@ -1114,7 +707,6 @@ th {
     margin-left: 10rem;
     padding-top: 2rem;
     padding-bottom: 2.5rem;
-    /*padding-top: 5rem;*/
 }
 
 #inscription .text_connect h2{
@@ -1128,13 +720,11 @@ th {
     margin-left: 6.5rem;
 }
 
-
 #inscription p {
     font-size: 14px;
     font-weight: 100;
     line-height: 3rem;
     letter-spacing: 0.5px;
-    /*margin: 20px 0 30px;*/
 }
 
 #inscription span {
@@ -1175,6 +765,7 @@ th {
     cursor: pointer;
     margin-top: 1.5rem;
 }
+
 #inscription  form button a {
     color : #2F469A;
 }
@@ -1194,10 +785,12 @@ th {
     height: 100%;
     text-align: center;
 }
+
 #inscription form input{
     background-color: #e8f0fe;
     border: none;
 }
+
 #submit_insc{
     border-radius: 20px;
     border: 1px solid white;
@@ -1211,6 +804,7 @@ th {
     transition: transform 80ms ease-in;
     cursor: pointer;
 }
+
 #submit_insc:hover{
     border-radius: 20px;
     border: 1px solid white;
@@ -1224,17 +818,20 @@ th {
     transition: transform 80ms ease-in;
     cursor: pointer;
 }
+
 .separator_form{
     width: 8rem;
     height: 2px;
     background-color: #2F469A;
     border-radius: 7%;
 }
+
 #inscription .error{
     color: red;
     display: flex;
     margin-top: 0.5rem;
 }
+
 #inscription .container {
     background-color: #fff;
     border-radius: 10px;
@@ -1264,6 +861,7 @@ th {
     opacity: 0;
     z-index: 1;
 }
+
 #inscription .sign-up-container:hover{
     background-color: white;
 
@@ -1276,18 +874,6 @@ th {
     z-index: 5;
     animation: show 0.6s;
 }
-
-#inscription @keyframes show {
-                 0%, 49.99% {
-                     opacity: 0;
-                     z-index: 1;
-                 }
-
-                 50%, 100% {
-                     opacity: 1;
-                     z-index: 5;
-                 }
-             }
 
 #inscription .overlay-container {
     position: absolute;
@@ -1305,17 +891,20 @@ th {
     height: 100%;
     width: 200%;
 }
+
 #inscription .formulaire_insc{
     width: 50%;
 
     background-size: cover;
 
 }
+
 #inscription .formulaire_insc input{
     padding: 1rem;
     margin-top: 0.5rem;
 
 }
+
 #signUp{
     border-radius: 20px;
     border: 1px solid white;
@@ -1450,18 +1039,6 @@ th {
     animation: show 0.6s;
 }
 
-#contact @keyframes show {
-             0%, 49.99% {
-                 opacity: 0;
-                 z-index: 1;
-             }
-
-             50%, 100% {
-                 opacity: 1;
-                 z-index: 5;
-             }
-         }
-
 #contact .overlay-container {
     position: absolute;
     top: 0;
@@ -1484,11 +1061,6 @@ th {
     color: white;
     background-color: #2F469A;
 }
-
-
-
-
-
 
 /*Headerdash - Thibault*/
 #headerdash {
@@ -1557,4 +1129,52 @@ th {
 }
 #dashboard .dashboard_container2 {
     width: 930px;
+}
+
+/*Dimitri Footer 18.01.2022*/
+
+
+#footer {
+    background-color: #2F469A;
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding-top: 2rem;
+}
+#footer a:hover{
+    text-decoration: underline;
+}
+.logo a{
+    font-size: 2rem;
+    color: white;
+}
+.logo i:hover{
+    box-shadow: 1px 2px 10px  4px white;
+    background-color: white;
+    border-radius: 50%;
+    color: #2F469A ;
+    font-size: 2rem;
+}
+.logo ul{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+
+}
+
+.item-footer-0 {    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.item-footer-1 {
+  
+    display: flex;
+    padding: 0.8rem;
 }

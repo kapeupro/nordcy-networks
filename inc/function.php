@@ -73,6 +73,15 @@ function mailValidation($errors,$value,$key){
     return $errors;
 }
 
+function getUserById($id){
+    global $pdo;
+    $sql="SELECT * FROM nordcynetwork_user WHERE id = :id";
+    $query = $pdo->prepare($sql);
+    $query ->bindValue(':id',$id,PDO::PARAM_INT);
+    $query->execute();
+    return $query->fetch();
+}
+
 function requestVerifLogin($email){
     global $pdo;
     $sql = "SELECT * FROM nordcynetwork_user WHERE email = :email";

@@ -26,23 +26,25 @@ include('inc/header.php');
 </section>
 
 
-<section id="container-a-pro" >
-   <div class="container-pro">
-       <div class="item-pro-0">
-           <h2>A propos de <br>Nordcy Network</h2>
-
-       </div>
-       <div class="item-pro-1">
-           <p>Nordcy Network est une société innovante, spécialisée dans la sécurité des systèmes d’information. Ses experts sont mondialement reconnus pour leurs activités de R & D dans le domaine des systèmes de détection d’intrusion et de réaction contre les cyberattaques.
-               <br>
-               <br> Nordcy Network fournit des solutions pour la défense active contre les attaques sur les systèmes et réseaux d’information pour garantir la disponibilité et la qualité des services de ses clients.
-               <br>
-               <br> Ces solutions sont de nature à répondre aux problématiques des acteurs de l’internet que ce soit pour leurs propres besoins ou pour offrir un service à valeur ajoutée à leurs clients.</p>
-       </div>
-   </div>
+<section id="container-a-pro">
+    <div class="vih">
+        <div class="container-pro">
+            <div class="item-pro-0">
+                <h2>
+                    A propos de <br>Nordcy Network
+                    <hr>
+                </h2>
+            </div>
+            <div class="item-pro-1">
+                <p>Nordcy Network est une société innovante, spécialisée dans la sécurité des systèmes d’information. Ses experts sont mondialement reconnus pour leurs activités de R & D dans le domaine des systèmes de détection d’intrusion et de réaction contre les cyberattaques.
+                    <br>
+                    <br> Nordcy Network fournit des solutions pour la défense active contre les attaques sur les systèmes et réseaux d’information pour garantir la disponibilité et la qualité des services de ses clients.
+                    <br>
+                    <br> Ces solutions sont de nature à répondre aux problématiques des acteurs de l’internet que ce soit pour leurs propres besoins ou pour offrir un service à valeur ajoutée à leurs clients.</p>
+            </div>
+        </div>
     </div>
-
-</section>
+</section> 
 
 <section id="partenaire">
     <div class="vh">
@@ -80,8 +82,8 @@ include('inc/header.php');
     </div>
     <div class="item-service-0">
         <h2>Intelligence DDoS</h2>
-        <p>Evaluez la résilience de vos services face aux attaques et bénéficiez de <br>
-            notre expertise de la menace DDoS.</p>
+        <p>Evaluez la résilience de vos services face aux attaques et bénéficiez de 
+            notre  <br> expertise de la menace DDoS.</p>
     </div>
 
     <div class="container-service">
@@ -91,9 +93,10 @@ include('inc/header.php');
                 de vos services aux utilisateurs, et prévenir infections et fuites de données.</p>
         </div>
     </div>
-</section>
-<script src="asset/js/ajax.js">
-    
-</script>
+</section> 
+
+<script src="asset/js/ajax.js"></script>
+
+
 <?php include('footer.php');
 ?>

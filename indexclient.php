@@ -4,6 +4,7 @@ include('inc/headerclient.php');
 
 session_start();
 
+
 if (empty($_SESSION['user']['id']))
     {
         header('Location: 404.php');
