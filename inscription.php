@@ -63,6 +63,7 @@ if (!empty($_POST['submitted'])) {
         $success=true;
 
         echo('Félicitations vous allez etre rediriger dans 5 seconde vers la page accueil');
+
     }
 }
 include('inc/header.php');
@@ -89,7 +90,7 @@ include('inc/header.php');
                     <form action="" method="post" class="formulaire_insc">
                         <p>Bienvenue sur notre site !</p>
                         <div class="separator_form"></div>
-                        <label for="prenom"</label>
+                        <label for="pseudo"</label>
                         <input type="text" id="prenom" name="prenom" placeholder="Prénom" value="<?=recupInputValue('prenom');?>">
                         <span class="error"><?php if(!empty($errors['prenom'])) {echo $errors['prenom']; } ?></span>
 
