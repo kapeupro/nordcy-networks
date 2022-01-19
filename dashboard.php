@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-
+require_once("inc/pdo.php");
 require_once("inc/function.php");
 
 if (empty($_SESSION['user']['id']))
@@ -37,12 +37,12 @@ include ('inc/headerdash.php')
         </div>
         <div class="dashboard_container2">
             <!-- canvas -->
-            <div>
-                <canvas id="myChart">
 
-                </canvas>
+            <div>
+                <canvas id="myChart"></canvas>
             </div>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src=asset/js/Chart.js></script>
+    <script src=asset/js/testajax.js></script>
 
 </section>

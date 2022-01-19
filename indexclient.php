@@ -7,7 +7,7 @@ session_start();
 
 if (empty($_SESSION['user']['id']))
     {
-        header('Location: 404.php');
+        header('Location:404.php');
     }
 else {
    //var_dump($_SESSION['user']);
