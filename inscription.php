@@ -150,11 +150,28 @@
                                 <input type="password" id="password2" name="password2" placeholder="Confirmer votre mot de passe" value="<?php if(!empty($_POST['password2'])){echo $_POST['password2'];}?>">
                                 <span class="error"><?php if(!empty($errors['password2'])) {echo $errors['password2'];}?></span>
 
-                                <input type="checkbox" name="inscription" checked="checked" /> J'accepte les Condiction <br/>   
-                                <input type="submit" name="submitted" id="submitted" value="Inscription">
-                            </form>
-                        </div>
-            </section>
-        <?php }
-        include('footer.php');
-        ?>
+
+                        <label for="nom"></label>
+                        <input type="text" id="nom" name="nom" placeholder="nom" value="<?=recupInputValue('nom');?>">
+                        <span class="error"><?php if(!empty($errors['nom'])) {echo $errors['nom']; } ?></span>
+
+                        <label for="email"></label>
+                        <input type="email" id="email" name="email" placeholder="E-mail" value="<?=recupInputValue('email');?>">
+                        <span class="error"><?php if(!empty($errors['email'])) {echo $errors['email']; } ?></span>
+
+                        <label for="password"></label>
+                        <input type="password" id="password" name="password" placeholder="Mot de passe" value="">
+                        <span class="error"><?php if(!empty($errors['password'])) {echo $errors['password']; } ?></span>
+
+                        <label for="password2"></label>
+                        <input type="password" id="password2" name="password2" placeholder="Confirmer votre mot de passe" value="<?php if(!empty($_POST['password2'])) {echo $_POST['password2']; } ?>">
+                        <span class="error"><?php if(!empty($errors['password2'])) {echo $errors['password2']; } ?></span>
+
+                        <input type="checkbox" name="inscription" checked="checked" /> J'accepte les Condiction <br/>
+                        <input type="submit" name="submitted" id="submitted" value="Inscription">
+                    </form>
+                </div>
+    </section>
+<?php }
+include('footer.php');
+?>
