@@ -37,9 +37,15 @@ include ('inc/headerdash.php')
         </div>
         <div class="dashboard_container2">
             <!-- canvas -->
-
             <div>
                 <canvas id="myChart"></canvas>
+            </div>
+
+            <!-- tableau -->
+            <div class="container">
+
+            <canvas id="myChart2"></canvas>
+
             </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

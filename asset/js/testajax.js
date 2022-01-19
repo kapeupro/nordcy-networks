@@ -66,5 +66,57 @@
                             position: 'top'
                         },
                     */}
-                let protocolchart = new Chart(protocolname, protocolconfig);            
+                let protocolchart = new Chart(protocolname, protocolconfig);
+                
+                let checksumStatus = data.map(function (e) {
+                    return e.checksumStatus;
+                });
+                console.log(checksumStatus);
+
+                let disabledpersentage = 0;
+                let goodpersentage = 0;
+
+                data.forEach(function(e){
+                    if(e.checksumStatus == "disabled"){
+                        disabledpersentage++;
+                    }
+                    else if(e.checksumStatus == "good"){
+                        goodpersentage++;
+                    }
+                });
+
+                // ici il y aura le chart.js
+                let checksumgraphe = document.getElementById('myChart2');
+                let checksumname = checksumgraphe.getContext('2d');
+
+                let checksumconfig = {
+                    type: 'doughnut',
+                    data: {
+                        labels: [
+                            'Checksum disabled',
+                            'Checksum good',
+                        ],
+                        datasets: [{
+                            //label: 'Base de données',
+                            data: [disabledpersentage, goodpersentage],
+                            backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(54, 162, 235)'
+                            ],
+                            //hoverOffset: 4
+                        }]
+                    },
+                    /*options: {
+                        responsive: true,
+                        legend: {
+                            position: 'right',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Protocoles utilisés lors des attaques réseau (en %)',
+                            position: 'top'
+                        },
+                    */}
+                let checksumchart = new Chart(checksumname, checksumconfig);
+
             });
