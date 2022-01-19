@@ -730,7 +730,32 @@ th {
 #inscription span {
     font-size: 12px;
 }
-
+#submitted{
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: #2F469A;
+    color: #2F469A;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+}
+#submitted:hover{
+    border-radius: 20px;
+    border: 1px solid #2F469A;
+    background-color: white;
+    color: #2F469A;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+}
 #inscription button  {
     border-radius: 20px;
     border: 1px solid white;
@@ -743,6 +768,13 @@ th {
     text-transform: uppercase;
     transition: transform 80ms ease-in;
     cursor: pointer;
+}
+.mail_css{
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    border-bottom: #2F469A ;
+
 }
 
 #inscription button :hover{
