@@ -9,8 +9,8 @@ if (empty($_SESSION['user']['id']))
     header('Location: 404.php');
 }
 
-debug ($_SESSION);
-print_r ($_SESSION);
+//debug ($_SESSION);
+//print_r ($_SESSION);
 
 include ('inc/headerdash.php')
 
@@ -21,7 +21,7 @@ include ('inc/headerdash.php')
         <div class="dashboard_container1">
             <div class="dashboard_buttons">
                 <div class="dashboard_btn">
-                    <h1 class="text-center mt-5 mb-4">Bonjour,<?php echo $_SESSION['user']['id']?> </h1>
+                    <h1 class="text-center mt-5 mb-4">Bonjour, <?php echo $_SESSION['user']['prenom']?> <?php echo $_SESSION['user']['nom']?> </h1>
                     <h3 class="text-center"> Bienvenue sur votre tableau de bord </h3>
                 </div>
                 <div class="dashboard_btn">
