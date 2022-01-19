@@ -3,9 +3,8 @@
 require_once("inc/pdo.php");
 require_once("inc/function.php");
 
-var_dump($_POST);
-$errors = array();
-//var_dump('ok');
+
+$errors = [];
 
 if(!empty($_POST['submitted'])){
     $email = cleanXss('email');
@@ -13,13 +12,20 @@ if(!empty($_POST['submitted'])){
 
     //Verification email
     $errors = mailValidation($errors,$email,'email');
-
     $user = requestVerifLogin($email);
+
     var_dump($user);
     if(empty($user)){
-        $errors['email'] = "Aucun compte trouvé avec cet adresse mail";
+        $errors['email'] = "Renseignez un email valide";
         var_dump('email non valide');
     }
+
+    var_dump($password);
+    if(empty($password)){
+        $errors['password'] = "Mettre un mot de passe valide";
+        var_dump('Mot de pass non valide');
+    }
+
     else{
         if(password_verify($password , $user['password'] )){
             var_dump('password verif');
@@ -33,9 +39,6 @@ if(!empty($_POST['submitted'])){
                 'status'=>$user['status'],
                 'ip'=>$_SERVER['REMOTE_ADDR']
             );
-        }else {
-            $errors['password'] = "Mot de passe incorrect";
-            var_dump('mot de pass faux');
         }
         if(count($errors) == 0) {
             var_dump('ok');
@@ -44,9 +47,6 @@ if(!empty($_POST['submitted'])){
         }
     }
 }
-
-
-
 
     include ('inc/header.php');
 ?>
@@ -57,12 +57,12 @@ if(!empty($_POST['submitted'])){
                     <h1>Se connecter</h1>
                     <div>
                         <label for="email"></label>
-                        <input type="email" name="email" id="email" placeholder="Email" value="<?php if(!empty($_POST['email'])) {echo $_POST['email']; } ?>">
-                        <span class="error"><?php if(!empty($errors['nom'])) {echo $errors['nom']; } ?></span>
+                        <input type="email" name="email" id="email" placeholder="Email" value="<?=recupInputValue('email');?>">
+                        <span class="error"><?php if(!empty($errors['email'])) {echo $errors['email']; } ?></span>
                     </div>
                     <div>
                         <label for="password"></label>
-                        <input type="password" name="password" id="password" placeholder="Mot de passe" value="<?php if(!empty($_POST['password'])) {echo $_POST['password']; } ?>">
+                        <input type="password" placeholder="Mot de passe" id="password" name="password" value="">
                         <span class="error"><?php if(!empty($errors['password'])) {echo $errors['password']; } ?></span>
                     </div>
 
@@ -89,7 +89,5 @@ if(!empty($_POST['submitted'])){
             </div>
         </div>
     </section>
-
-
 <?php
 include('footer.php');
