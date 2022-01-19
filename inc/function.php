@@ -19,13 +19,6 @@ function cleanXss($key){
     return trim(strip_tags($_POST[$key]));
 }
 
-function viewError($errors,$key)
-{
-    if(!empty($errors[$key])) {
-        echo $errors[$key];
-    }
-}
-
 function textValidation($errors,$value,$key,$min = 3,$max = 50)
 {
     if(!empty($value)) {
@@ -44,7 +37,7 @@ function emailValidation($errors,$email,$key)
 {
     if(!empty($email)) {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $errors[$key] = 'Veuillez renseigner un email valid';
+            $errors[$key] = 'Veuillez renseigner un email valide';
         }
     } else {
         $errors[$key] = 'Veuillez renseigner un email';

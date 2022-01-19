@@ -11,11 +11,13 @@ if(!empty($_POST['submitted'])){
     $email = cleanXss('email');
     $password = cleanXss('password');
 
-    //Verification email
+    //Validation
     $errors = mailValidation($errors,$email,'email');
+    $errors = textValidation($errors,$password,'password',6,20);
 
     $user = requestVerifLogin($email);
     var_dump($user);
+
     if(empty($user)){
         $errors['email'] = "Aucun compte trouvé avec cet adresse mail";
         var_dump('email non valide');
@@ -57,7 +59,7 @@ if(!empty($_POST['submitted'])){
                     <div>
                         <label for="email"></label>
                         <input type="email" name="email" id="email" placeholder="Email" value="<?php if(!empty($_POST['email'])) {echo $_POST['email']; } ?>">
-                        <span class="error"><?php if(!empty($errors['nom'])) {echo $errors['nom']; } ?></span>
+                        <span class="error"><?php if(!empty($errors['email'])) {echo $errors['email']; } ?></span>
                     </div>
                     <div>
                         <label for="password"></label>
