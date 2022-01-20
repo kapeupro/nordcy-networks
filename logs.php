@@ -11,6 +11,7 @@ include ('inc/headerdash.php')
             <table id="tableau_logs">
                 <div class="table_div">
                     <thead class="head_table">
+                    <tr>
                     <th>ID</th>
                     <th>Date</th>
                     <th>Version</th>
@@ -27,24 +28,9 @@ include ('inc/headerdash.php')
                     <th>Ip Dest</th>
                     </tr>
                     </thead>
-                    <tbody class="body_table">
+                    <tbody id="datainsert" class="body_table">
 
-                <tr>
-                    <td>start</td>
-                    <td>test slt</td>
-                    <td>test slt</td>
-                    <td>test slt</td>
-                    <td>test slt</td>
-                    <td>test slt</td>
-                    <td>test slt</td>
-                    <td>test slt</td>
-                    <td>test slt</td>
-                    <td>test slt</td>
-                    <td>test slt</td>
-                    <td>test slt</td>
-                    <td>test slt</td>
-                    <td>end</td>
-                </tr>
+                
 
                 </tbody>
             </div>
