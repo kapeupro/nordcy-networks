@@ -5,7 +5,7 @@ require_once("inc/function.php");
 
 
 $errors = [];
-
+//var_dump('ok');
 
 
 
@@ -20,22 +20,19 @@ if(!empty($_POST['submitted'])){
 
     $user = requestVerifLogin($email);
 
-
     if(empty($user)){
 
         $errors['email'] = "Cet email n'existe pas";
+
 
     }
 
     if(empty($password)){
         $errors['password'] = "Veuillez remplir un mot de passe";
-
-
     }
 
     else{
         if(password_verify($password , $user['password'] )){
-
             /* création de session*/
             session_start();
             $_SESSION['user']=array(
@@ -49,9 +46,7 @@ if(!empty($_POST['submitted'])){
         }
         if(count($errors) == 0) {
 
-
-
-            header('Location: indexclient.php');
+            header('Location: indexclient.php');/* a voir si ot met dashboard.php*/
         }
     }
 }

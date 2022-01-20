@@ -10,25 +10,56 @@ fleche.on('click',function (e){
 })
 const sr = ScrollReveal();
 
-fetch('http://localhost:8888/nordcy-networks/inc/getData.php')
+fetch('http://localhost/nordcy-networks/inc/getData.php')
 .then(function(response) {
     return response.json()
     }).then(function(data){
         console.log(data);
-        //une trame est une ligne du tableau 
-        //donc une trame est englobe par une balise <tr> et </tr>
-        //chaque tour de boucle de data et une ligne 
-        //data[i]= une ligne 
-        //data[i].ttl ou .autre chose pour recupere la valeur 
-        //et cette valeur et englobe par des td
-        
-       $("#datainsert").append("<td>")
-       $("#datainsert").append(data[0].id)
-       $("#datainsert").append("</td>")
 
-       $("#datainsert").append("</td>")
-       $("#datainsert").append(data[0].date)
-       $("#datainsert").append("</td>")
+        const datasql = document.querySelector('#datainsert')
+
+
+        data.forEach(element => {
+            /*Le += cela rajoute a chaque fois
+            Mais si il y a que le = il va m'afficher la derniers ligne 
+            */ 
+            datasql.innerHTML += `
+        <tr>
+            <td>${element.id}</td>
+            <td>${element.date}</td>
+            <td>${element.version}</td>
+            <td>${element.headerLength}</td>
+            <td>${element.service}</td>
+            <td>${element.identification}</td>
+            <td>${element.status}</td>
+            <td>${element.flagsCode}</td>
+            <td>${element.ttl}</td>
+            <td>${element.checksumStatus}</td>
+            <td>${element.checksumCode}</td>
+            <td>${element.headerChecksum}</td>
+            <td>${element.ipFrom}</td>
+            <td>${element.ipDest}</td>
+        </tr>
+        `
+        });
+
+
+        
+
+        
+        
+         
+
+
+
+
+
+
+
+
+
+       
+
         // ici il y aura le chart.js
         let ttl = data.map(function (e) {
             return e.ttl;

@@ -1225,3 +1225,7 @@ th {
     justify-content: center;
     padding: 2rem;
 }
+
+.body_table {
+    text-align: center;
+}
