@@ -8,9 +8,8 @@ if (empty($_SESSION['user']['id']))
     header('Location: 404.php');
 }
 else {
-    var_dump($_SESSION['user']);
+    //var_dump($_SESSION['user']);
 }
-
 $errors=array();
 
 if(!empty($_POST['submitted']))
@@ -27,9 +26,9 @@ if(!empty($_POST['submitted']))
         mail('nordcynetwork@gmail.com', 'Envoi depuis la page Contact', $_POST['message'], 'From: ' . $_POST['email']);
     }
 }
-debug($_POST);
+//debug($_POST);
 
-include ('inc/header.php');
+include ('inc/headerclient.php');
 
 ?>
 

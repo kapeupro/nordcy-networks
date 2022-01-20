@@ -1,6 +1,6 @@
 <?php
 
-include('inc/headerclient.php');
+include('inc/function.php');
 
 session_start();
 
@@ -14,7 +14,7 @@ else {
     }
 
 
-
+    include('inc/headerclient.php');
 
 /*REGARDER LES FONCTIONS POUR ENLEVER LE BONTON DECONNEXION QUAND ONT EST PAS CONNECTER */
 ?>

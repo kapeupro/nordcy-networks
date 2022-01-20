@@ -26,7 +26,7 @@
                 $query->execute();
                 $verifPseudo = $query->fetch();
                 if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo '<p class="mail_css"> L\'adresse '.  $email . ' est valide." </p>';
+        //echo '<p class="mail_css"> L\'adresse '.  $email . ' est valide." </p>';
         } else {
             echo $error['email'] = 'Veuillez remplir un adresse correcte';
         }

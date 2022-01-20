@@ -24,7 +24,7 @@
                 <ul>
                     <li><a href="indexclient.php">Accueil</a></li>
                     <li><a href="dashboard.php">Dashboard</a></li>
-                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="contactclient.php">Contact</a></li>
                     <li><a href="deconnexion.php">Déconnexion</a></li>
 
                 </ul>
@@ -32,4 +32,3 @@
         </div>
     </header>
 
-<?php
