@@ -130,13 +130,6 @@
     position: absolute;
     top:90%;
 }
-.cta-fleche img:hover{
-    background-color: black;
-    border-radius: 50%;
-
-    width: 100%;
-
-}
 
 /*Container-a-pro*/
 .container-pro {
@@ -774,14 +767,6 @@ th {
     font-size: 16px;
     color: black;
     border-bottom: #2F469A ;
-
-}
-
-#inscription button :hover{
-    border-radius: 20px;
-    border: 1px solid white;
-    background-color: white;
-    color: #2F469A;
 
 }
 
