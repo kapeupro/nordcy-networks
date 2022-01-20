@@ -87,13 +87,7 @@ include ('inc/headerdash.php')
 
         <div class="container-graphe-donner-1">
 
-            <canvas id="myChart6"></canvas>
-
-        </div>
-
-        <div class="container-graphe-donner-1">
-
-            <canvas id="myChart6"></canvas>
+            <canvas id="myChart7"></canvas>
 
         </div>
 

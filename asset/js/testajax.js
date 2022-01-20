@@ -310,4 +310,69 @@
                 let ipFromchart = new Chart(ipFromname, ipFromconfig);
                 
 
+                /* Nouvelle Trames sur Graphe 2 */
+
+                let ipDest = data.map(function (e) {
+                    return e.ipDest;
+                });
+                console.log(ipDest);
+
+                let ipDest3470ff25count = 0;
+                let ipDest343111a8count = 0;
+                let ipDestacd913e3count = 0;
+                let ipDestc0a8014acount = 0;
+                let ipDestd83ac6cecount = 0;
+
+                data.forEach(function(e){
+                    if(e.ipDest == "3470ff25"){
+                        ipDest3470ff25count++;
+                    }
+                    else if(e.ipDest == "343111a8"){
+                        ipDest343111a8count++;
+                    }
+                    else if(e.ipDest == "acd913e3"){
+                        ipDestacd913e3count++;
+                    }
+                    else if(e.ipDest == "c0a8014a"){
+                        ipDestc0a8014acount++;
+                    }
+                    else if(e.ipDest == "d83ac6ce"){
+                        ipDestd83ac6cecount++;
+                    }
+                    else if(e.ipDest == "acd913e3"){
+                        ipDestacd913e3count++;
+                    }
+                });
+
+                // ici il y aura le chart.js
+                let ipDestgraphe = document.getElementById('myChart7');
+                let ipDestname = ipDestgraphe.getContext('2d');
+
+                let ipDestconfig = {
+                    type: 'bar',
+                    data: {
+                        labels: [
+                            'Ip Dest 3470ff25',
+                            'Ip Dest 343111a8',
+                            'Ip Dest acd913e3',
+                            'Ip Dest c0a8014a',
+                            'Ip Dest d83ac6ce',
+                        ],
+                        datasets: [{
+                            label: 'IP Dest' ,
+                            data: [ipDest3470ff25count, ipDest343111a8count, ipDestacd913e3count, ipDestc0a8014acount, ipDestd83ac6cecount, ipDestacd913e3count],
+                            backgroundColor: [
+                            'rgb(255, 129, 132)',
+                            'rgb(54, 142, 135)',
+                            'rgb(255, 205, 186)',
+                            'rgb(255, 99, 132)',
+                            'rgb(54, 162, 235)',
+                            ],
+                            hoverOffset: 5
+                        }]
+                    },
+                        }
+                let ipDestchart = new Chart(ipDestname, ipDestconfig);
+
+
             });
