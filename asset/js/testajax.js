@@ -55,17 +55,7 @@
                             //hoverOffset: 4
                         }]
                     },
-                    /*options: {
-                        responsive: true,
-                        legend: {
-                            position: 'right',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Protocoles utilisés lors des attaques réseau (en %)',
-                            position: 'top'
-                        },
-                    */}
+                   }
                 let protocolchart = new Chart(protocolname, protocolconfig);
                 
                 let checksumStatus = data.map(function (e) {

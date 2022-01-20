@@ -16,39 +16,59 @@ include ('inc/headerdash.php')
 
 ?>
 
-<section id="dashboard">
-    <div class="dashboard_container0">
-        <div class="dashboard_container1">
-            <div class="dashboard_buttons">
-                <div class="dashboard_btn">
-                    <h1 class="text-center mt-5 mb-4">Bonjour, <?php echo $_SESSION['user']['prenom']?> <?php echo $_SESSION['user']['nom']?> </h1>
-                    <h3 class="text-center"> Bienvenue sur votre tableau de bord </h3>
+        <section id="dashboard">
+            <div class="dashboard_container0">
+                <div class="dashboard_container1">
+                    <div class="dashboard_buttons">
+                        <div class="dashboard_btn">
+                            <h1 class="text-center mt-5 mb-4">Bonjour, <?php echo $_SESSION['user']['prenom']?> <?php echo $_SESSION['user']['nom']?> </h1>
+                            <h3 class="text-center"> Bienvenue sur votre tableau de bord </h3>
+                        </div>
+                        <div class="dashboard_btn">
+                            <a href="dashboard.php">Dashboard</a>
+                        </div>
+                        <div class="logs_btn">
+                            <a href="logs.php">Logs</a>
+                        </div>
+                        <div class="details_btn">
+                            <a href="detail.php">Détails</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="dashboard_btn">
-                    <a href="dashboard.php">Dashboard</a>
-                </div>
-                <div class="logs_btn">
-                    <a href="logs.php">Logs</a>
-                </div>
-                <div class="details_btn">
-                    <a href="detail.php">Détails</a>
-                </div>
-            </div>
-        </div>
-        <div class="dashboard_container2">
-            <!-- canvas -->
-            <div>
-                <canvas id="myChart"></canvas>
-            </div>
+                <div class="dashboard_container2">
+                    <!-- canvas -->
+                    <div>
+                        <canvas id="myChart"></canvas>
+                    </div>
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script src=asset/js/testajax.js></script>
 
-            <!-- tableau -->
-            <div class="container">
+        </section>
+
+    <section id="Container-Graphe">
+            <h2> Données reçu depuis notre serveur </h2>
+        <div class="container-graphe-donner-0">
 
             <canvas id="myChart2"></canvas>
 
-            </div>
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src=asset/js/testajax.js></script>
+        <div class="container-graphe-donner-1">
 
-</section>
+            <canvas id="myChart3"></canvas>
+
+        </div>
+
+        <div class="container-graphe-donner-2">
+
+            <canvas id="myChart4"></canvas>
+
+        </div>
+
+        <div class="container-graphe-donner-3">
+
+            <canvas id="myChart2"></canvas>
+
+        </div>
+
+    </section>

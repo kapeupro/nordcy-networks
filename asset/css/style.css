@@ -1125,7 +1125,7 @@ th {
 /*Dashboard - Thibault*/
 
 #dashboard {
-    padding: 10rem;
+    padding: 5rem;
 }
 #dashboard .dashboard_container1 {
     display: flex;
@@ -1162,6 +1162,7 @@ th {
 #dashboard .dashboard_container2 {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 /*Dimitri Footer 18.01.2022*/
@@ -1210,4 +1211,14 @@ th {
   
     display: flex;
     padding: 0.8rem;
+}
+
+/* Container-Graphe */
+
+#Container-Graphe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
 }
