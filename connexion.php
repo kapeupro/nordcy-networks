@@ -3,7 +3,7 @@
 require_once("inc/pdo.php");
 require_once("inc/function.php");
 
-var_dump($_POST);
+
 $errors = [];
 //var_dump('ok');
 
@@ -20,8 +20,6 @@ if(!empty($_POST['submitted'])){
 
     $user = requestVerifLogin($email);
 
-    var_dump($user);
-
     if(empty($user)){
 
         $errors['email'] = "Cet email n'existe pas";
@@ -29,15 +27,12 @@ if(!empty($_POST['submitted'])){
 
     }
 
-    var_dump($password);
     if(empty($password)){
         $errors['password'] = "Veuillez remplir un mot de passe";
-        var_dump('Mot de pass non valide');
     }
 
     else{
         if(password_verify($password , $user['password'] )){
-            var_dump('password verif');
             /* création de session*/
             session_start();
             $_SESSION['user']=array(
@@ -50,7 +45,6 @@ if(!empty($_POST['submitted'])){
             );
         }
         if(count($errors) == 0) {
-            var_dump('ok');
 
             header('Location: indexclient.php');/* a voir si ot met dashboard.php*/
         }
