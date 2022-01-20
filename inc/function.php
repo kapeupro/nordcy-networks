@@ -84,6 +84,12 @@ function requestVerifLogin($email){
     return $query->fetch();
 }
 
+function dateToRead($dateDb){
+    $date = new DateTime();
+    $date->setTimestamp($dateDb);
+    return $date->format('d/m/Y H:i:s');
+}
+
 function isLogged()
 {
     if(!empty($_SESSION['user'])) {

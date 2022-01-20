@@ -41,33 +41,59 @@ include ('inc/headerdash.php')
                         <canvas id="myChart"></canvas>
                     </div>
                 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-            <script src=asset/js/testajax.js></script>
+                <script src=asset/js/testajax.js></script>
 
         </section>
 
-    <section id="Container-Graphe">
-            <h2> Données reçu depuis notre serveur </h2>
-        <div class="container-graphe-donner-0">
+    <section id="Container-Graphe-Trames">
 
-            <canvas id="myChart2"></canvas>
+            <h2> Données reçu depuis notre serveur </h2>
+
+        <div class="Container-Graphe">
+
+                <div class="container-graphe-donner-0">
+
+                    <canvas id="myChart2"></canvas>
+
+                </div>
+
+                <div class="container-graphe-donner-1">
+                    <!-- Taux de ttl -->
+                    <canvas id="myChart3"></canvas>
+
+                </div>
+
+                <div class="container-graphe-donner-1">
+
+                    <canvas id="myChart4"></canvas>
+
+                </div>
+
+                <div class="container-graphe-donner-1">
+
+                    <canvas id="myChart5"></canvas>
+
+                </div>
+
+        </div>
+
+        <div class="Container-Graphe-1">
+            
+        <div class="container-graphe-donner-1">
+
+            <canvas id="myChart6"></canvas>
 
         </div>
 
         <div class="container-graphe-donner-1">
 
-            <canvas id="myChart3"></canvas>
+            <canvas id="myChart6"></canvas>
 
         </div>
 
-        <div class="container-graphe-donner-2">
+        <div class="container-graphe-donner-1">
 
-            <canvas id="myChart4"></canvas>
-
-        </div>
-
-        <div class="container-graphe-donner-3">
-
-            <canvas id="myChart2"></canvas>
+            <canvas id="myChart6"></canvas>
 
         </div>
 
