@@ -19,8 +19,6 @@ if(!empty($_POST['submitted']))
     }
 }
 
-debug($_POST);
-
 include ('inc/header.php'); ?>
 
     <section id="contact">
@@ -39,7 +37,7 @@ include ('inc/header.php'); ?>
                     <label for="message"></label>
 
 
-                    <textarea id="message" name="message" placeholder="Votre Message.." value="<?=recupInputValue('message');?>"></textarea>
+                    <textarea id="message" name="message" placeholder=" Votre Message" value="<?=recupInputValue('message');?>"></textarea>
                     <span class="error"><?php if(!empty($errors['message'])) {echo $errors['message']; } ?></span>
 
                     <input type="submit" name="submitted" value="ENVOYER">

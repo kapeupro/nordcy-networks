@@ -1,7 +1,7 @@
 <?php
 
-require_once("inc/pdo.php");
-require_once("inc/function.php");
+require_once("pdo.php");
+require_once("function.php");
 
 
 echo 'hello';
@@ -33,3 +33,5 @@ foreach($data as $trame)
     echo $trame->ip->from; echo '<br>'; // 17
     echo $trame->ip->dest; echo '<br>';  // 18    
  } 
+
+ 
