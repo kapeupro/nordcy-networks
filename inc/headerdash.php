@@ -20,7 +20,7 @@
             <p>NETWORK</p>
         </div>
         <div class="header_nav">
-            <a href="index.php">Accueil</a>
+            <a href="indexclient.php">Accueil</a>
             <a href="dashboard.php">Dashboard</a>
             <a href="logs.php">Logs</a>
             <a href="detail.php">Détails</a>

@@ -100,8 +100,8 @@
                 $query->execute();
                 // redirection
                 $success=true;
-                header('refresh:5;url=index.php');
-                echo(' vous allez etre rediriger dans 5 seconde vers la page accueil');
+                header('refresh:2;url=connexion.php');
+                echo(' vous allez etre rediriger dans 2 seconde vers la page accueil');
 
             }
         }
@@ -150,7 +150,6 @@
                                 <input type="password" id="password2" name="password2" placeholder="Confirmer votre mot de passe" value="<?php if(!empty($_POST['password2'])){echo $_POST['password2'];}?>">
                                 <span class="error"><?php if(!empty($errors['password2'])) {echo $errors['password2'];}?></span>
 
-                                <input type="checkbox" name="inscription" checked="checked" /> J'accepte les Condiction <br/>
                                 <input type="submit" name="submitted" id="submitted" value="Inscription">
                     </form>
                 </div>

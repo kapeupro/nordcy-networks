@@ -645,10 +645,7 @@
     background-color: black;
 }
 
-#tableau_logs .head_table th{
-    background-color: #2f469a;
-    border: 1px black solid ;
-}
+
 
 #tableau_logs .body_table td {
     border: 1px black solid ;
@@ -658,21 +655,6 @@
 
 }
 
-td:nth-child(even) {
-    background-color: #2f469a;
-    color: white;
-
-}
-
-th:nth-child(even) {
-    background-color: #2f469a;
-    color: white;
-
-}
-
-th {
-    width:200px;
-}
 
 #inscription {
     display: flex;
