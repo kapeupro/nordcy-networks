@@ -1230,3 +1230,66 @@ th {
 .body_table {
     text-align: center;
 }
+
+.container_detail h2 {
+
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+
+}
+
+.container_detail li {
+    display: flex;
+    justify-content: center;
+    color: #000000;
+}
+
+.item_detail {
+    display: flex;
+    justify-content: center;
+    color: #000000;
+}
+
+.item_detail a {
+    color: #000000;
+}
+
+.item_detail_trame1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tableaux_graphe {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.item_detail_p {
+    display: flex;
+    padding: 3rem;
+}
+
+.box_detail_0 {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+
+.box_detail_1 {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 1rem;
+
+}
+
+.box_detail_2 {
+    display: flex;
+    
+    align-items: center;
+}
