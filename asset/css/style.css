@@ -1293,3 +1293,21 @@ th {
     
     align-items: center;
 }
+
+.container_ip_information-0 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_ip_information-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box_detail_0 {
+    display: flex;
+}

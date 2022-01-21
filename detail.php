@@ -79,3 +79,50 @@ include("inc/headerdash.php")
     <script src="asset/js/detailjs.js"></script>
 
 </section>
+
+<section>
+
+<div id="tableau">
+            <table id="tableau_logs">
+                <div class="table_div">
+                    <thead class="head_table">
+                        <tr>
+                            <th>ID</th>
+                            <th>protocolPortsFrom</th>
+                            <th>checksumStatus</th>
+                            <th>IpFrom</th>
+                            <th>IpFest</th>
+                        </tr>
+                    </thead>
+
+                <tbody id="datainsert" class="body_table">
+                        
+                </tbody>
+
+            </div>
+        </table>
+    </div>
+    <script src=asset/js/detaill.js></script>
+</section>
+
+<section>   
+    <div class="container_ip_information-0">
+            <h2>IP FROM</h2>
+            <br>
+        <p><strong>c0a8014a = 192.168.1.74</strong></p>
+        <p><strong>acd913e3 = 172.217.19.227</strong></p>
+        <p><strong>incoonu = d83aa80c</strong></p>
+    </div>
+    
+    <br>
+
+    <div class="container_ip_information-1">
+            <h2>IP DEST</h2>
+            <br>
+        <p><strong>3470ff25 = inconnu</strong></p>
+        <p><strong>acd913e3 = 172.217.19.227</strong></p>
+        <p><strong>c0a8014a = 192.168.1.74</strong></p>
+    </div>
+
+
+</section>
