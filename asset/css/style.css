@@ -1058,6 +1058,24 @@
     background-color: #2F469A;
 }
 
+/*Tableau */
+
+td:nth-child(even) {
+    background-color: #2f469a;
+    color: white;
+
+}
+
+th:nth-child(even) {
+    background-color: #2f469a;
+    color: white;
+
+}
+
+th {
+    width:200px;
+}
+
 /*Headerdash - Thibault*/
 #headerdash {
     padding-top: 1.5rem;
